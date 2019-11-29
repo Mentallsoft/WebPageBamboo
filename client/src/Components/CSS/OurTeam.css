@@ -1,0 +1,21 @@
+.o-FullContainerOurTeam{
+    width: 100vw;
+    background-color: black;
+}
+
+.o-ContainerPhotoTeam{
+    width: 100%;
+    
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+    .o-ContainerPhotoTeam{
+        flex-direction: column;
+    }
+}

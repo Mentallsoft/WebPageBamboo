@@ -1,0 +1,29 @@
+.o-FullContainer{
+    background-image: url("../../Images/PNG/WelcomeBackGround.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.o-LogoTipo{
+    width: 30vw;
+    margin: 0 10vw 0 10vw;
+}
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+    .o-FullContainer{
+        background: black;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .o-LogoTipo{
+        width: 70vw;
+        margin: 0;
+    }
+}

@@ -1,0 +1,44 @@
+.o-FullContainerPilares{
+    background-color: black;
+    width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-PilarsContainer{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+
+.Acordion{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 0;;
+}
+
+.CardTitle{
+    
+    text-align: center;
+    width: 50vw;
+    font-size: 1.3rem;
+    padding: 1rem 0 0 0;
+    margin: 1.3rem;
+    font-weight: 10;
+}
+            
+ .CardDesc{
+    padding: 1rem;
+}
+
+.CardDesc p{
+    font-size: 1.2rem;
+}

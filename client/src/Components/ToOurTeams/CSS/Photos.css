@@ -1,0 +1,66 @@
+
+.o-PhotoTeam{
+    width: 16.65vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    filter: grayscale(100%);
+    overflow: hidden;
+
+}
+
+.o-PhotoTeam:hover{
+    filter: grayscale(0);
+}
+
+.o-TeamInformation{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: #05A535;
+    text-align: center;
+}
+
+.o-ToAnimation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 25vh 0;
+    transition: 0.7s;
+}
+
+.o-ToAnimation:hover{
+    padding: 13vh 0;
+}
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+    .o-PhotoTeam{
+        width: 100vw;
+        height: 20vh;
+        filter: grayscale(100%);
+        justify-content: center;
+    }
+    .o-TeamInformation{  
+        left: 0;
+        width: 40vw;
+        height: 100%;    
+    }
+
+    .o-ToAnimation{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        padding: 0 38vw;
+        transition: 0.7s;
+    }
+
+    .o-ToAnimation:hover{
+        padding: 0 -10vw;
+    }
+}

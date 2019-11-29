@@ -1,0 +1,13 @@
+.o-FullContainerWA{
+    background-color: #05A535;
+    width: 100vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-FullContainerWA p{
+    padding: 0 10vw;
+}
