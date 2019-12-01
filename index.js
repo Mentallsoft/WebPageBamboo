@@ -21,8 +21,8 @@ app.post('/Api/Contact', (req, res) => {
     `<h3>Información de contacto</h3>
     <ul>
         <li>Nombre: ${req.body.Name}</li>
-        <li>Nombre: ${req.body.Email}</li>
-        <li>Nombre: ${req.body.Phone}</li>
+        <li>Correo: ${req.body.Email}</li>
+        <li>Teléfono: ${req.body.Phone}</li>
     </ul>  
     <h3>Mensaje:</h3>
     <p>${req.body.Message}</p>`
