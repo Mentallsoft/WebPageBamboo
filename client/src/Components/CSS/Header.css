@@ -3,6 +3,7 @@
     width: 100vw;
     margin: 0;
     padding: 0;
+    z-index: 999;
 }
 
 .o-Menu{
@@ -22,7 +23,10 @@
     
 }
 
-.Hoja{
-    background-color: red;
+.o-Sheet{
+    background-color: green;
+    width: 5rem;
+    text-align: center;
+    margin: 1rem 0;
 }
 

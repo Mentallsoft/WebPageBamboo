@@ -15,20 +15,29 @@ import Copyrigth from "../../Components/Copyrigth"
 //Styles
 import "./CSS/index.css"
 
+//Images
+import logo from "../../Images/PNG/WelcomeBackGround.png"
+import LogoT1 from "../../Images/PNG/LogoTipo.png"
+
 class Home extends React.Component{
 
     render(){
 
         return(
-            <div className="o-index">
-                <Header/>
-                <Welcome/>
+            <div className="o-indexHome">
+                <Header
+                Label1={"Blog"}
+                URL1={"/Blog"}
+                Label2={"Contáctanos"}
+                Ident={"#Contact"}
+                />
+                <Welcome BgImage={logo} ClssNm={"o-LogoTipo"} LogoT1={LogoT1}/>
                 <WeAre/>
                 <Pilares/>
                 <Services/>
                 <Clients/>
                 <OurTeam/>
-                <Contact/>
+                <section  id="Contact"><Contact/></section>
                 <Copyrigth/>
             </div>
         )

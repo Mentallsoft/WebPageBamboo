@@ -120,12 +120,12 @@ class Contact extends React.Component {
                 </Rodal>
 
                 <div className="o-Localization">
-                <div className="o-InfoContact">
-                    
+                    <div className="o-InfoContact">
+
                         <div className="o-Group1">
                             <div className="o-Info">
                                 <h3>Dirección:</h3>
-                <h5>Edificio Torre de Cali Oficinas, Cali – Colombia</h5>
+                                <h5>Edificio Torre de Cali Oficinas, Cali – Colombia</h5>
                             </div>
                             <div className="o-Info">
                                 <h3>Email:</h3>
@@ -147,7 +147,7 @@ class Contact extends React.Component {
                     <div className="o-Map">
 
                         PARA UTILIZAR EL MAPA HAY QUE UTILIZAR TARJETA DE CREDITO
-                        
+
                     </div>
                 </div>
 

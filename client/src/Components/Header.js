@@ -3,14 +3,11 @@ import React from "react"
 import { Link } from 'react-router-dom';
 
 //Configuration
-import items from "../Configuration/URL"
-/**Si desea aderir más opciones en el header, edite el archivo ../Configuration/URL */
 
 //Style
 import "./CSS/Header.css"
 
-//Imagenes
-//import Bamboo from "../Images/SVG/Bamboo.svg"
+import Scrollchor from 'react-scrollchor';
 
 
 class Header extends React.Component {
@@ -20,12 +17,10 @@ class Header extends React.Component {
         return (
             <div className="o-FullFrame">
                 <ul className="o-Menu">
-                    {
-                        items && items.map(
-                            (item, key) =>
-                                    <li key={key}><Link to={item.url}>{item.title}</Link></li>
-                        )
-                    }
+
+                    <li className="o-Sheet"><Link to={this.props.URL1}>{this.props.Label1}</Link></li>
+                    <li className="o-Sheet"><Scrollchor to={this.props.Ident} className="nav-link"><a>{this.props.Label2}</a></Scrollchor></li>
+
                 </ul>
             </div>
         )

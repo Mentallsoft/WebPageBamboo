@@ -11,6 +11,7 @@
     "react": "^16.12.0",
     "react-accordeon": "^1.1.1",
     "react-awesome-modal": "^2.0.5",
+    "react-awesome-slider": "^2.2.1",
     "react-cardstack": "^1.1.0",
     "react-dom": "^16.12.0",
     "react-gooey-nav": "^2.0.0",
@@ -19,8 +20,10 @@
     "react-popup": "^0.10.0",
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^1.2.2",
     "react-sanfona": "^1.4.0",
     "react-scripts": "3.2.0",
+    "react-scrollchor": "^6.0.0",
     "reactjs-popup": "^1.5.0",
     "reactstrap": "^8.1.1",
     "rodal": "^1.7.0"

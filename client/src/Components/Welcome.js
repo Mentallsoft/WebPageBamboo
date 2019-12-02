@@ -5,16 +5,18 @@ import React from "react"
 import "./CSS/Welcome.css"
 
 //Imagenes
-import Bamboo from "../Images/PNG/LogoTipo.png"
-
 
 class Welcome extends React.Component {
 
     render() {
 
         return (
-            <div className="o-FullContainer">
-                <img className="o-LogoTipo" src={Bamboo} alt="" />
+            <div className="o-FullContainer"
+            style={{backgroundImage: `url(${this.props.BgImage})`}}
+            >
+                <img className={this.props.ClssNm} src={this.props.LogoT1} alt="" />
+                <img className="o-LogoTipo2" src={this.props.LogoT2} alt="" />
+                <img className="o-Bumb" src={this.props.Bumb} alt="" />
             </div>
         )
     }

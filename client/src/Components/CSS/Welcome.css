@@ -1,17 +1,35 @@
 .o-FullContainer{
-    background-image: url("../../Images/PNG/WelcomeBackGround.png");
+    background: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .o-LogoTipo{
     width: 30vw;
-    margin: 0 10vw 0 10vw;
+    margin: 20vh 10vw 0 10vw;
+}
+
+.o-LogoTipo3{
+    width: 30vw;
+    margin: 20vh 10vw 0 10vw;
+}
+
+.o-LogoTipo2{
+    width: 0;
+    visibility: hidden;
+}
+
+.o-Bumb{
+    height: 90vh;
+    margin: 0 20vw 0 10vw;
+    left: 55vw;
+    position: absolute;
 }
 
 /*Para pantallas pequeñas*/
@@ -19,11 +37,36 @@
     .o-FullContainer{
         background: black;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .o-LogoTipo{
         width: 70vw;
         margin: 0;
+        visibility: visible;
     }
+
+    .o-LogoTipo3{
+        width: 0;
+        margin: 0;
+        visibility: hidden;
+    }
+
+    .o-LogoTipo2{
+        visibility: visible;
+        width: 70vw;
+    }
+
+    .o-Bumb{
+        margin: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+
+
+
+
 }
