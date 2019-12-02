@@ -1,10 +1,13 @@
+//Dependencies
 import React from 'react'
-import { Button as BstButton, Form, Input } from 'reactstrap';
+import { Button as BstButton, Form, Input } from 'reactstrap'
 import axios from 'axios'
 
-import Rodal from 'rodal';
-import 'rodal/lib/rodal.css';
+//Popup
+import Rodal from 'rodal'
+import 'rodal/lib/rodal.css'
 
+//Style
 import "./CSS/Contact.css"
 
 class Contact extends React.Component {
@@ -30,19 +33,15 @@ class Contact extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         })
-        console.log(this.state.Name)
-        console.log(this.state.Phone)
-        console.log(this.state.Email)
-        console.log(this.state.Message)
     }
 
+    //Funcion asincrona para conectarse con el servidos a traves de las metodos post/get/put/put
     async handleSubmit(e) {
         e.preventDefault();
 
         const { Name, Email, Phone, Message, Subject } = this.state;
 
-
-
+        //Muestra PopUp
         this.setState({
             visible: true
         })
@@ -53,6 +52,7 @@ class Contact extends React.Component {
 
     }
 
+    //Oculta el popup
     hide() {
         this.setState({ visible: false });
         window.location.reload(false);
@@ -62,7 +62,7 @@ class Contact extends React.Component {
         return (
             <div className="o-FullContainerContact" >
                 <h1 style={{ color: "black" }}>Contáctanos</h1>
-                <p style={{color: "gray", margin:"0 0 3rem"}}>Si está interesado en alguno de nuestros servicios o quiere mayor información acerca de los mismos, póngase en contacto con nosotros y estaremos encantados de atenderle a la mayor brevedad posible.</p>
+                <p style={{ color: "gray", margin: "0 0 3rem" }}>Si está interesado en alguno de nuestros servicios o quiere mayor información acerca de los mismos, póngase en contacto con nosotros y estaremos encantados de atenderle a la mayor brevedad posible.</p>
                 <Form className="o-FormContainer" onSubmit={this.handleSubmit}>
                     <div className="o-ContactInformation">
                         <Input
@@ -101,28 +101,57 @@ class Contact extends React.Component {
                     <BstButton className="o-ButtonSend">Enviar</BstButton>
 
                 </Form>
-                {/**/}
+
+                {/*Pop up que enseña cuando el mensaje ha sido enviado satisfactoriamente*/}
 
                 <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
                     customStyles={{
+                        width: "75vw",
+                        height: "50vh",
                         backgroundColor: "white",
                         color: "green",
                         textalign: "center",
-                        padding: "3rem",textAlign: "center", textJustify: "center"
+                        textAlign: "center", textJustify: "center"
                     }}
                 >
                     <h1>¡Tu mensaje ha sido enviado con éxito!</h1>
                     <h3>Prontamente nos pondremos en contácto contigo.</h3>
 
                 </Rodal>
-                {/***------------------------------------------------------------- */}
 
+                <div className="o-Localization">
+                <div className="o-InfoContact">
+                    
+                        <div className="o-Group1">
+                            <div className="o-Info">
+                                <h3>Dirección:</h3>
+                <h5>Edificio Torre de Cali Oficinas, Cali – Colombia</h5>
+                            </div>
+                            <div className="o-Info">
+                                <h3>Email:</h3>
+                                <h5>info@bambooanalytics.com.co</h5>
+                            </div>
+                        </div>
+                        <div className="o-Group1">
+                            <div className="o-Info">
+                                <h3>Teléfono: </h3>
+                                <h5>(+57) (2) 4854614</h5>
+                            </div >
+                            <div className="o-Info">
+                                <h3>Horario de oficina:</h3>
+                                <h5 id="h5">Lunes – Viernes</h5>
+                                <h5 id="h52">8am-12pm y 1pm-6pm</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="o-Map">
 
+                        PARA UTILIZAR EL MAPA HAY QUE UTILIZAR TARJETA DE CREDITO
+                        
+                    </div>
+                </div>
 
-
-
-
-            </div>
+            </div>//Final del div global
         )
     }
 }

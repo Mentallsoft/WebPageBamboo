@@ -10,6 +10,7 @@ import Services from "../../Components/Services"
 import Clients from "../../Components/Clients"
 import OurTeam from "../../Components/OurTeam"
 import Contact from "../../Components/Contact"
+import Copyrigth from "../../Components/Copyrigth"
 
 //Styles
 import "./CSS/index.css"
@@ -28,6 +29,7 @@ class Home extends React.Component{
                 <Clients/>
                 <OurTeam/>
                 <Contact/>
+                <Copyrigth/>
             </div>
         )
     }
