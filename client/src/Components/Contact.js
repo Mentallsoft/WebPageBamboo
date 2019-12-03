@@ -61,8 +61,8 @@ class Contact extends React.Component {
     render() {
         return (
             <div className="o-FullContainerContact" >
-                <h1 style={{ color: "black" }}>Contáctanos</h1>
-                <p style={{ color: "gray", margin: "0 0 3rem" }}>Si está interesado en alguno de nuestros servicios o quiere mayor información acerca de los mismos, póngase en contacto con nosotros y estaremos encantados de atenderle a la mayor brevedad posible.</p>
+                <h1 style={{ color: "var(--Black)" }}>Contáctanos</h1>
+                <p style={{ color: "var(--GrayOscure)", margin: "0 0 3rem" }}>Si está interesado en alguno de nuestros servicios o quiere mayor información acerca de los mismos, póngase en contacto con nosotros y estaremos encantados de atenderle a la mayor brevedad posible.</p>
                 <Form className="o-FormContainer" onSubmit={this.handleSubmit}>
                     <div className="o-ContactInformation">
                         <Input

@@ -1,12 +1,12 @@
 .o-FullContainerOurTeam{
     width: 100vw;
-    background-color: black;
+    background-color: var(--Black);
 }
 
 .o-ContainerPhotoTeam{
     width: 100%;
     
-    background-color: rebeccapurple;
+    background-color: var(--GrayOscure);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

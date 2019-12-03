@@ -51,11 +51,21 @@ class Services extends React.Component {
                 <h1>Servicios</h1>
 
                 <div className="o-Card">
-                    
+
                     {Info.map(
                         (Info, key) =>
-                            <div className="o-ContainerCardService" onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}>
-                                <CardService Service={Info.Title} ServiceDesc={Info.Paragraph} Color={Info.Color} Image={Info.Image} />
+                            <div
+                                className="o-ContainerCardService"
+                                onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}
+                            >
+
+                                <CardService
+                                    Service={Info.Title}
+                                    ServiceDesc={Info.Paragraph}
+                                    Color={Info.Color}
+                                    Image={Info.Image}
+                                />
+
                             </div>
                     )}
                 </div>
@@ -63,7 +73,7 @@ class Services extends React.Component {
                 <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
                     //Styles PopUp
                     customStyles={{
-                        backgroundColor: "white",
+                        backgroundColor: "var(--White)",
                         width: "90vw",
                         height: "90vh",
                         padding: "0",
@@ -83,11 +93,8 @@ class Services extends React.Component {
                 </Rodal>
 
             </div>
-
-
         )
     }
-
 }
 
 export default Services;

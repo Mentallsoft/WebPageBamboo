@@ -1,9 +1,9 @@
 .o-FullContainerClients{
-background-color: #EFEFEF;
+background-color: var(--GrayClare);
 }
 
 .o-FullContainerClients h1{
-    color: black;
+    color: var(--Black);
 }
 
 .o-ImgContainerClients{

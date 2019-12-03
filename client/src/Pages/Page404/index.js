@@ -1,10 +1,11 @@
+//Dependencies
 import React from "react"
-
 import { Link } from 'react-router-dom';
 
+//Style
 import "./CSS/index.css"
 
-class Home extends React.Component {
+class Page404 extends React.Component {
     render() {
         return (
             <div style={{
@@ -31,4 +32,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Page404;

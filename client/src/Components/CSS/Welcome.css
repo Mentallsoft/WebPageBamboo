@@ -1,5 +1,5 @@
 .o-FullContainer{
-    background: black;
+    background: var(--Black);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@
 /*Para pantallas pequeñas*/
 @media (max-width: 600px) {
     .o-FullContainer{
-        background: black;
+        background: var(--Black);
         align-items: center;
         flex-direction: column;
         justify-content: center;

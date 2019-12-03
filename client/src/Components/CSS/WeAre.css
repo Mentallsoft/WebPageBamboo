@@ -1,5 +1,5 @@
 .o-FullContainerWA{
-    background-color: #05A535;
+    background-color: var(--VerdBamboo);
     width: 100vw;
     min-height: 70vh;
     display: flex;

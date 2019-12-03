@@ -1,5 +1,5 @@
 .o-FullContainerPilares{
-    background-color: black;
+    background-color: var(--Black);
     width: 100vw;
     min-height: 50vh;
     display: flex;

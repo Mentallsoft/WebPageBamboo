@@ -26,7 +26,7 @@
     width: 30vw;
     height: 2rem;
     font-family: 'Archivo Narrow', sans-serif;
-    border: 0.05rem gray solid;
+    border: 0.05rem var(--GrayOscure) solid;
 }
 
 .o-ContainerMessage{
@@ -34,14 +34,14 @@
     height: 10rem;
     margin: 4vh 0;
     font-family: 'Archivo Narrow', sans-serif;
-    border: 0.05rem gray solid;
+    border: 0.05rem var(--GrayOscure) solid;
 }
 
 .o-ButtonSend{
     padding: 0.5rem 6rem;
     border: none;
-    background-color: #05A535;
-    color: white;
+    background-color: var(--VerdBamboo);
+    color: var(--White);
     font-family: 'Archivo Narrow', sans-serif;
     box-shadow: 10px 10px 9px -6px rgba(0,0,0,0.51);
 }
@@ -55,7 +55,7 @@
 }
 
 .o-Map{
-    background-color: green;
+    background-color: var(--VerdBamboo);
     width: 100%;
     height: 50vh;
 }
@@ -86,12 +86,12 @@
 }
 
 .o-Info h3{
-    color: black;
+    color: var(--Black);
     margin: 0;
 }
 
 .o-Info h5{
-    color: black
+    color: var(--Black)
 }
 
 #h5{
@@ -103,7 +103,9 @@
     
 }
 
-@media(max-width: 600px){
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+
     .o-Localization{
         flex-direction: column;
     }
@@ -115,29 +117,6 @@
     .o-Group1{
         flex-direction: column;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Para pantallas pequeñas*/
-@media (max-width: 600px) {
 
     .o-ContactInformation{
         flex-direction: column;

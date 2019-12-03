@@ -10,7 +10,7 @@ class CardService extends React.Component {
                 <img className="o-ServiceImage" src={this.props.Image} alt=""/>
                 <div className="o-ContainerServiceInfo">
                     <h1 style={{color: this.props.Color, fontSize: "2rem"}}>{this.props.Service}</h1>
-                    <p style={{color: "gray"}}>{this.props.ServiceDesc}</p>
+                    <p style={{color: "var(--GrayOscure)"}}>{this.props.ServiceDesc}</p>
                 </div>
             </div>
         )

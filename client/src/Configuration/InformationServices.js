@@ -7,18 +7,18 @@ export default [
         Title: "Desarrollo de aplicaciones de analítica",
         Paragraph: "Nos encargamos de la construcción de aplicaciones analíticas basadas en las necesidades del negocio. Ofrecemos el ciclo completo de construcción de proyectos de este tipo, teniendo siempre el usuario final como eje central. Desarrollamos bajo metodologías ágiles en plataformas líderes en el mercado.",
         Image: S1,
-        Color: "#05A535"
+        Color: "var(--VerdBamboo)"
     },
     {
         Title: "Diseño de experiencias de usuario para analítica",
         Paragraph: "La cultura organizacional y el perfil de nuestros usuarios es un insumo indispensable la creación de soluciones analíticas, es por esto que nuestro departamento de experiencia de usuario está en la capacidad de brindar herramientas para la adopción de nuevas formas de entender la información sin perder el foco de las necesidades de negocio.",
         Image: S2,
-        Color: "#80582A"
+        Color: "var(--MarronBamboo)"
     },
     {
         Title: "Asesoría en el proceso de toma de decisiones",
         Paragraph: "Contamos con conocimientos de metodología, tecnología, buenas prácticas y gestión de riesgos en la definición, implementación y mejora de procesos de analítica.",
         Image: S3,
-        Color: "#AA9906"
+        Color: "var(--YellowBamboo)"
     }
   ];

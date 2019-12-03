@@ -1,0 +1,32 @@
+[
+    {
+        "id": "Post",
+        "Author": "Efraín Pizarro 1",
+        "Category": "Inteligencia de negocios",
+        "Date": "3/12/2019",
+        "image": "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg",
+        "Title": "¿Qué es la analítica de datos?",
+        "Resumen": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Content": "El registro de una marca no es obligatorio pero la ausencia del mismo es un gran riesgo para el empresario. Por un lado, puede ser que alguien empiece a usar su marca y usted no pueda impedirlo. Por otro, que alguien registre su marca y le obligue a dejar de usarla por encontrarse usted en una infracción marcaria[1]. La ausencia del mismo es un gran riesgo para el... "
+    },
+    {
+        "id": "Post",
+        "Author": "Efraín Pizarro 2",
+        "Category": "Inteligencia de negocios",
+        "Date": "3/12/2019",
+        "image": "https://images.unsplash.com/photo-1532920161727-344adb090f7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+        "Title": "¿Qué es la analítica de datos?",
+        "Resumen": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Content": "El registro de una marca no es obligatorio pero la ausencia del mismo es un gran riesgo para el empresario. Por un lado, puede ser que alguien empiece a usar su marca y usted no pueda impedirlo. Por otro, que alguien registre su marca y le obligue a dejar de usarla por encontrarse usted en una infracción marcaria[1]. La ausencia del mismo es un gran riesgo para el... "
+    },
+    {
+        "id": "Post",
+        "Author": "Efraín Pizarro 3",
+        "Category": "Inteligencia de negocios",
+        "Date": "3/12/2019",
+        "image": "https://images.unsplash.com/photo-1532920161727-344adb090f7f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+        "Title": "¿Qué es la analítica de datos bla bla bla bla?",
+        "Resumen": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Content": "El registro de una marca no es obligatorio pero la ausencia del mismo es un gran riesgo para el empresario. Por un lado, puede ser que alguien empiece a usar su marca y usted no pueda impedirlo. Por otro, que alguien registre su marca y le obligue a dejar de usarla por encontrarse usted en una infracción marcaria[1]. La ausencia del mismo es un gran riesgo para el...  "
+    }
+]
