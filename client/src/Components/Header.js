@@ -18,9 +18,20 @@ class Header extends React.Component {
             <div className="o-FullFrame">
                 <ul className="o-Menu">
 
-                    <li className="o-Sheet"><Link to={this.props.URL1}>{this.props.Label1}</Link></li>
-                    <li className="o-Sheet"><Scrollchor to={this.props.Ident} className="nav-link"><a>{this.props.Label2}</a></Scrollchor></li>
-
+                    <li className="o-Sheet">
+                        <Link to={this.props.URL1}>
+                            {this.props.Label1}
+                        </Link>
+                    </li>
+                    <li className="o-Sheet"
+                        style={{ 
+                            visibility: this.props.Visibility,
+                            width: this.props.Width 
+                        }} >
+                        <Scrollchor to={this.props.Ident} className="nav-link">
+                            <a>{this.props.Label2}</a>
+                        </Scrollchor>
+                    </li>
                 </ul>
             </div>
         )

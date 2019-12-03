@@ -21,8 +21,8 @@ class Blog extends React.Component{
                 <Header 
                 Label1={"Inicio"}
                 URL1={"/"}
-                Label2={"Contáctanos"}
-                Ident={"#3"}
+                Visibility={"hidden"}
+                Width={0}
                 />
             <Welcome 
             ClssNm={"o-LogoTipo3"}
