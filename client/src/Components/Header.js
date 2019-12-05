@@ -29,7 +29,7 @@ class Header extends React.Component {
                             width: this.props.Width 
                         }} >
                         <Scrollchor to={this.props.Ident} className="nav-link">
-                            <a>{this.props.Label2}</a>
+                            {this.props.Label2}
                         </Scrollchor>
                     </li>
                 </ul>

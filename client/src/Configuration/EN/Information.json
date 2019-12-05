@@ -6,9 +6,7 @@
                 "Paragraph": "We are a company focused on the transformation of data into information, which seeks to provide you with the best tools for efficient decision making and resolution in the proper interpretation of your company's historical data. We will provide you with the best quality methods in order to live a pleasant experience throughout the life cycle of the project and achieve a tool with timely, consistent and reliable information and thus become your best ally of strategic technology."
             }
         ],
-
         "TitlePilares": "Our Pilars",
-
         "Pilars": [
             {
                 "Title": "Customer as the central axis",
@@ -38,6 +36,27 @@
                 "ColorDark": "var(--GrayBambooOscure)",
                 "width": "80vw"
             }
-        ]
-    }
-]
+        ],
+        "Services": [
+            {
+                "Title": "Development of analytical applications",
+                "Paragraph": "We handle the construction of analytical applications based on business needs. We offer the complete construction cycle of projects of this type, always having the end user as the central axis. We develop under agile methodologies in market leading platforms.",
+                "Image": "https://svgshare.com/i/Gbq.svg",
+                "Color": "var(--VerdBamboo)"
+            },
+            {
+                "Title": "Design of user experiences for analytics",
+                "Paragraph": "The organizational culture and profile of our users is an indispensable input in the creation of analytical solutions, which is why our user experience department is able to provide tools for the adoption of new ways of understanding information without losing focus. of business needs.",
+                "Image": "https://svgshare.com/i/GbC.svg",
+                "Color": "var(--MarronBamboo)"
+            },
+            {
+                "Title": "Advice in the decision making process",
+                "Paragraph": "We have knowledge of methodology, technology, good practices and risk management in the definition, implementation and improvement of analytical processes.",
+                "Image": "https://svgshare.com/i/GdH.svg",
+                "Color": "var(--YellowBamboo)"
+            }
+        ],
+        "Clients": "Our clients"
+        }
+    ]

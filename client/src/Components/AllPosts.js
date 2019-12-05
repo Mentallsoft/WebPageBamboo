@@ -11,7 +11,6 @@ import PostsEN from "../Configuration/PostIng.json"
 //Components
 import CardPost from "./ToAllPost/CardPost"
 
-import Pagination from "react-pagination-library";
 import "react-pagination-library/build/css/index.css"
 
 

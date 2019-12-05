@@ -7,7 +7,7 @@ import 'rodal/lib/rodal.css';
 import "./CSS/Services.css"
 
 //Configuration
-import Info from "../Configuration/InformationServices"
+//import Info from "../Configuration/InformationServices"
 
 //Components
 import CardService from "./ToServices/CardService"
@@ -45,20 +45,24 @@ class Services extends React.Component {
 
     render() {
 
+        const { Object } = this.props;
+
         return (
 
-            <div className="o-FullContainerServices">
+            Object.map(
+                (Info, Key) =>
+
+                <div className="o-FullContainerServices">
                 <h1>Servicios</h1>
 
                 <div className="o-Card">
 
-                    {Info.map(
+                    {Info.Services.map(
                         (Info, key) =>
                             <div
                                 className="o-ContainerCardService"
                                 onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}
                             >
-
                                 <CardService
                                     Service={Info.Title}
                                     ServiceDesc={Info.Paragraph}
@@ -93,6 +97,8 @@ class Services extends React.Component {
                 </Rodal>
 
             </div>
+                    
+            )  
         )
     }
 }

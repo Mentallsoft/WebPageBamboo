@@ -9,9 +9,11 @@ import InfoClients from "../Configuration/InformationClients"
 class Clients extends React.Component {
 
     render() {
+        const {Title} = this.props;
+
         return (
             <div className="o-FullContainerClients">
-                <h1>Clientes</h1>
+                <h1>{Title}</h1>
                 <div className="o-ImgContainerClients">
 
                     {InfoClients.map(

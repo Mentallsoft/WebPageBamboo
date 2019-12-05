@@ -28,12 +28,12 @@ class Home extends React.Component {
     render() {
 
         //Content of page
-        const { Content } = this.props;
+        const { Content, Information } = this.props;
 
         return (
             <div className="o-indexHome">
 
-                {this.props.Content.map(
+                {Content.map(
                     (Cont, key) =>
                         <Header
                             Label1={Cont.Blog}
@@ -48,9 +48,9 @@ class Home extends React.Component {
                     ClssNm={"o-LogoTipo"}
                     LogoT1={LogoT1} />
 
-                {this.props.Information.map(
+                {Information.map(
                     (Inf, Key) =>
-                        <div>
+                        <div style={{ padding: "0", margin: "0" }}>
                             {Inf.WeAre.map(
                                 (In, k2) =>
                                     <WeAre
@@ -58,14 +58,20 @@ class Home extends React.Component {
                                         Paragraph={In.Paragraph}
                                     />
                             )}
+
+                            <Pilares Object={this.props.Information} />
+                            <Services Object={this.props.Information} />
+
+
                         </div>
                 )}
 
-                <Pilares Object ={this.props.Information}/>
 
+                {this.props.Information.map(
+                    (Inf, Key) =>
+                        <Clients Title={Inf.Clients} />
+                )}
 
-                <Services />
-                <Clients />
                 <OurTeam />
                 <section id="Contact">
                     <Contact />
