@@ -16,6 +16,11 @@ import LogoT2 from "../../Images/SVG/Ideas.svg"
 import Bumb from "../../Images/SVG/Bumb.svg"
 
 class Blog extends React.Component {
+
+    componentWillMount() {
+          window.scrollTo(0, 0)
+      }
+
     render() {
         return (
             <div className="o-indexBlog">
@@ -33,8 +38,7 @@ class Blog extends React.Component {
                     LogoT2={LogoT2}
                 />
 
-                <AllPosts/>
-
+                <AllPosts Idiom={"ES"}/>
                 <Copyrigth />
             </div>
         )

@@ -7,13 +7,15 @@ class CardPost extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="o-CardPost">
                 <Link style={{textDecoration:"none"}}
                     to={{
                         pathname: '/Post',
                         state: {
                             Image: this.props.image,
+                            Video: this.props.Video,
                             Author: this.props.Author,
+                            Photo: this.props.Photo,
                             Category: this.props.Category,
                             Date: this.props.Date,
                             Title: this.props.Title,

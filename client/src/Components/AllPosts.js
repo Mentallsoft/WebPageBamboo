@@ -5,38 +5,48 @@ import React from 'react'
 import "./CSS/AllPosts.css"
 
 //Information
-import Posts from "../Configuration/Post.json"
+import PostsES from "../Configuration/Post.json"
+import PostsEN from "../Configuration/PostIng.json"
 
 //Components
 import CardPost from "./ToAllPost/CardPost"
 
-const Hola = () => {
+import Pagination from "react-pagination-library";
+import "react-pagination-library/build/css/index.css"
 
-    return (
-        <div className="o-AllPost">
 
-            {Posts.map(
-                (Post, Key) =>
+class AllPost extends React.Component {
 
-                    Post.id === "Post" ?
+    render() {
+
+        var a = "";
+
+        if (this.props.Idiom === "ES") {
+            a = PostsES;
+        } else{a = PostsEN;}
+
+        return (
+            <div className="o-AllPost">
+
+                {a.map(
+                    (Post, Key) =>
 
                         <CardPost
                             image={Post.image}
+                            Video={Post.Video}
                             Author={Post.Author}
-                            Title={Post.Title}                            
+                            Photo={Post.Photo}
+                            Title={Post.Title}
                             Category={Post.Category}
                             Date={Post.Date}
                             Resumen={Post.Resumen}
                             Content={Post.Content}
                         />
+                )}
 
-                        : null
+            </div>
+        )
 
-            )}
-
-        </div>
-    )
-
+    }
 }
-
-export default Hola
+export default AllPost

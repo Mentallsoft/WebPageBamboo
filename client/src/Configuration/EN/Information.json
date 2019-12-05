@@ -1,0 +1,43 @@
+[
+    {
+        "WeAre": [
+            {
+                "Title": "About us?",
+                "Paragraph": "We are a company focused on the transformation of data into information, which seeks to provide you with the best tools for efficient decision making and resolution in the proper interpretation of your company's historical data. We will provide you with the best quality methods in order to live a pleasant experience throughout the life cycle of the project and achieve a tool with timely, consistent and reliable information and thus become your best ally of strategic technology."
+            }
+        ],
+
+        "TitlePilares": "Our Pilars",
+
+        "Pilars": [
+            {
+                "Title": "Customer as the central axis",
+                "Paragraph": "Thinking of you, we create the user experience department, we do everything possible so that our solutions are adopted within the daily work tools, we adapt the solutions for you (Not the other way around).",
+                "Color": "var(--VerdBamboo)",
+                "ColorDark": "var(--VerdBambooOscure)",
+                "width": "80vw"
+            },
+            {
+                "Title": "We adapt to you",
+                "Paragraph": "We offer response times according to your needs, we learn and contribute from our experience to your business, we have the flexibility you need from your analytical ally.",
+                "Color": "var(--MarronBamboo)",
+                "ColorDark": "var(--MarronBambooOscure)",
+                "width": "80vw"
+            },
+            {
+                "Title": "Quality in our solutions",
+                "Paragraph": "Quality is what we all expect from solutions, isn't it? Our collaborators are trained and certified in the analytical implementation platform that will work with you.",
+                "Color": "var(--YellowBamboo)",
+                "ColorDark": "var(--YellowBambooOscure)",
+                "width": "80vw"
+            },
+            {
+                "Title": "Tranquility and transparency",
+                "Paragraph": "We have a methodology for raising requirements focused on analytical solutions for the business, we have specialized personnel in agile project management.",
+                "Color": "var(--GrayBamboo)",
+                "ColorDark": "var(--GrayBambooOscure)",
+                "width": "80vw"
+            }
+        ]
+    }
+]

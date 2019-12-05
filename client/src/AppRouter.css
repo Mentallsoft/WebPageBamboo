@@ -1,0 +1,21 @@
+.Idioms{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999999;
+    background-color: var(--YellowBamboo);
+}
+
+@media(max-width: 600px){
+    .Idioms{
+        right: -18vw;
+        top: 20vh;
+        transition: 0.3s;
+         
+    }
+
+    .Idioms:hover{
+        right: 0;
+        top: 20vh
+    }
+}

@@ -12,7 +12,7 @@ class Welcome extends React.Component {
 
         return (
             <div className="o-FullContainer"
-            style={{backgroundImage: `url(${this.props.BgImage})`}}
+                style={{ backgroundImage: `url(${this.props.BgImage})` }}
             >
                 <img className={this.props.ClssNm} src={this.props.LogoT1} alt="" />
                 <img className="o-LogoTipo2" src={this.props.LogoT2} alt="" />

@@ -1,0 +1,60 @@
+.o-PostIndex{
+    background-color: var(--White);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.o-PostIndex h1{
+    width: 100%;
+    color: var(--White);
+    padding: 1rem 0;
+    margin: 0;
+    background-color: var(--Black);
+}
+
+.o-PostIndex h6{
+    color: var(--Black);
+}
+
+#Post{
+background-color: var(--Black);
+justify-content: center;
+padding-bottom: 1rem;
+border: none;
+}
+
+#Post #Date{
+    color: var(--White);
+}
+
+.o-PostIndex p{
+    color: var(--Black);
+    margin-bottom: 2rem;
+    text-align: justify;
+    padding: 0 1.5rem;
+}
+
+.o-PostIndex iframe{
+    width: 60vw;  
+    height: 70vh;
+    padding: 0.3rem;
+    background-color: var(--Black);
+    border: none;
+}
+
+.o-ImagePost{
+    object-fit: cover;
+    width: 100%;
+    height: 30vh;
+}
+
+@media(max-width: 600px){
+    .o-PostIndex iframe{
+        width: 100vw;  
+        height: 30vh;
+    }
+}

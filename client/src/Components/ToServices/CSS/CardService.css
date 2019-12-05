@@ -6,6 +6,10 @@
     
 }
 
+.o-ContainerServiceInfo:hover{
+    background-color: var(--GrayClare);
+}
+
 .o-ServiceImage{
     width: 7rem;
     height: 7rem;

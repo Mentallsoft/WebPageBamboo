@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import "./CSS/index.css"
 
 class Page404 extends React.Component {
+
+    componentWillMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <div style={{

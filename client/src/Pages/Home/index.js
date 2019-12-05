@@ -19,26 +19,58 @@ import "./CSS/index.css"
 import logo from "../../Images/PNG/WelcomeBackGround.png"
 import LogoT1 from "../../Images/PNG/LogoTipo.png"
 
-class Home extends React.Component{
+class Home extends React.Component {
 
-    render(){
+    componentWillMount() {
+        window.scrollTo(0, 0)
+    }
 
-        return(
+    render() {
+
+        //Content of page
+        const { Content } = this.props;
+
+        return (
             <div className="o-indexHome">
-                <Header
-                Label1={"Blog"}
-                URL1={"/Blog"}
-                Label2={"Contáctanos"}
-                Ident={"#Contact"}
-                />
-                <Welcome BgImage={logo} ClssNm={"o-LogoTipo"} LogoT1={LogoT1}/>
-                <WeAre/>
-                <Pilares/>
-                <Services/>
-                <Clients/>
-                <OurTeam/>
-                <section  id="Contact"><Contact/></section>
-                <Copyrigth/>
+
+                {this.props.Content.map(
+                    (Cont, key) =>
+                        <Header
+                            Label1={Cont.Blog}
+                            URL1={"/Blog"}
+                            Label2={Cont.ContactUs}
+                            Ident={"#Contact"}
+                        />
+                )}
+
+                <Welcome //Pendiente por vincular a los archivos Json
+                    BgImage={logo}
+                    ClssNm={"o-LogoTipo"}
+                    LogoT1={LogoT1} />
+
+                {this.props.Information.map(
+                    (Inf, Key) =>
+                        <div>
+                            {Inf.WeAre.map(
+                                (In, k2) =>
+                                    <WeAre
+                                        Title={In.Title}
+                                        Paragraph={In.Paragraph}
+                                    />
+                            )}
+                        </div>
+                )}
+
+                <Pilares Object ={this.props.Information}/>
+
+
+                <Services />
+                <Clients />
+                <OurTeam />
+                <section id="Contact">
+                    <Contact />
+                </section>
+                <Copyrigth />
             </div>
         )
     }
