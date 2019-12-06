@@ -4,24 +4,27 @@ import React from 'react'
 //Styles
 import "./CSS/Clients.css"
 
-import InfoClients from "../Configuration/InformationClients"
-
 class Clients extends React.Component {
 
     render() {
-        const {Title} = this.props;
+        const {Object} = this.props;
 
         return (
-            <div className="o-FullContainerClients">
-                <h1>{Title}</h1>
+
+
+            Object.map(
+                (Info, Key) => 
+                
+                <div className="o-FullContainerClients">
+                <h1>{Info.TitleClients}</h1>
                 <div className="o-ImgContainerClients">
 
-                    {InfoClients.map(
+                    {Info.Clients.map(
                         (Info, Key) =>
                             <img 
                             Key={Key} 
                             src={Info.Image} 
-                            alt={Info.Client}
+                            alt={Info.Name}
                             style={{
                                 height: Info.Size
                             }} 
@@ -30,6 +33,10 @@ class Clients extends React.Component {
 
                 </div>
             </div>
+                
+                )
+
+            
         )
     }
 

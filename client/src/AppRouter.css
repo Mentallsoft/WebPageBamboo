@@ -1,21 +1,21 @@
 .Idioms{
+    width: 10rem;
     position: fixed;
-    right: 0;
+    left: 96vw;
     top: 0;
     z-index: 999999;
-    background-color: var(--YellowBamboo);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.Idioms:hover{
+    left: 90vw;
 }
 
 @media(max-width: 600px){
     .Idioms{
-        right: -18vw;
+        left: 90vw;
         top: 20vh;
         transition: 0.3s;
-         
-    }
-
-    .Idioms:hover{
-        right: 0;
-        top: 20vh
     }
 }

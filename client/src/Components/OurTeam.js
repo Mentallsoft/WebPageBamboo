@@ -4,9 +4,6 @@ import React from 'react'
 //Style
 import "./CSS/OurTeam.css"
 
-//Configuration
-import Info from "../Configuration/InformationOurTeam"
-
 //Component
 import Photos from "./ToOurTeams/Photos"
 
@@ -14,14 +11,16 @@ class OurTeam extends React.Component {
 
     render() {
 
+        const { Object } = this.props;
+
         return (
             <div className="o-FullContainerOurTeam">
-                <h1>Nuestro equipo</h1>
+                <h1>{Object.TitleTeam}</h1>
 
 
                 <div className="o-ContainerPhotoTeam">
-                    {Info.map((Info, Key) =>
-                        <Photos Key={Key} Photo={Info.Photo} Member={Info.Member} Extension={Info.Extension} Role={Info.Role} />
+                    {Object.Team.map((Info, Key) =>
+                        <Photos Key={Key} Photo={Info.Photo} Member={Info.Name} Extension={Info.Extension} Role={Info.Role} />
                     )
                     }
                 </div>

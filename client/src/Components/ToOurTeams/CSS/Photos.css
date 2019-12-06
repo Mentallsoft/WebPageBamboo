@@ -11,6 +11,11 @@
 
 }
 
+.o-PhotoTeam img{
+    object-fit: contain;
+    height: 100%;
+}
+
 .o-PhotoTeam:hover{
     filter: grayscale(0);
 }
@@ -45,6 +50,12 @@
         filter: grayscale(100%);
         justify-content: center;
     }
+
+    .o-PhotoTeam img{
+        width: 100%;
+        height: auto;
+    }
+
     .o-TeamInformation{  
         left: 0;
         width: 40vw;

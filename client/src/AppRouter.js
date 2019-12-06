@@ -18,11 +18,14 @@ import "./AppRouter.css"
 //ES
 import ButtonsES from "./Configuration/ES/Buttons.json"
 import InformationES from "./Configuration/ES/Information.json"
+import ImageES from "./Configuration/ES/Images.json"
+import PostsES from "./Configuration/ES/Post.json"
 
-//ES
+//EN
 import ButtonsEN from "./Configuration/EN/Buttons.json"
 import InformationEN from "./Configuration/EN/Information.json"
-
+import ImageEN from "./Configuration/EN/Images.json"
+import PostsEN from "./Configuration/EN/Post.json"
 
 class AppRouter extends React.Component {
 
@@ -41,16 +44,22 @@ class AppRouter extends React.Component {
 
     render() {
 
-        var Content = "";
-        var Information = ""
+        var InfButton = "";
+        var Information = "";
+        var Images = "";
+        var Posts = "";
 
         if (this.state.Language === "US") {
-            Content = ButtonsEN;
+            InfButton = ButtonsEN;
             Information = InformationEN
+            Images = ImageEN
+            Posts = PostsEN
         }
         else {
-            Content = ButtonsES
+            InfButton = ButtonsES
             Information = InformationES
+            Images = ImageES
+            Posts = PostsES
         }
 
 
@@ -69,10 +78,16 @@ class AppRouter extends React.Component {
                         exact path="/"
                         render={() =>
                             <Home
-                                Content={Content}
+                                InfButton={InfButton}
                                 Information={Information}
+                                Images={Images}
                             />} />
-                    <Route exact path="/Blog" component={Blog} />
+                    <Route exact path="/Blog" render={() =>
+                        <Blog
+                            InfButton={InfButton}
+                            Images={Images}
+                            Posts={Posts}
+                        />} />
                     <Route exact path="/Post" component={Post} />
                     <Route exact component={Page404} />
                 </Switch>

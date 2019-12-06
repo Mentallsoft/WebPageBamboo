@@ -59,10 +59,30 @@ class Contact extends React.Component {
     }
 
     render() {
+
+        const {
+            Button,
+            Title,
+            Paragraph,
+            NameLabel,
+            EmailLabel,
+            PhoneLabel,
+            MessageLabel,
+            TitleDirection, 
+            Direction, 
+            TitleEmail, 
+            Email, 
+            TitlePhone, 
+            Phone, 
+            TitleAtentionHour, 
+            Day, 
+            Hour
+        } = this.props;
+
         return (
             <div className="o-FullContainerContact" >
-                <h1 style={{ color: "var(--Black)" }}>Contáctanos</h1>
-                <p style={{ color: "var(--GrayOscure)", margin: "0 0 3rem" }}>Si está interesado en alguno de nuestros servicios o quiere mayor información acerca de los mismos, póngase en contacto con nosotros y estaremos encantados de atenderle a la mayor brevedad posible.</p>
+                <h1 style={{ color: "var(--Black)" }}>{Title}</h1>
+                <p style={{ color: "var(--GrayOscure)", margin: "0 0 3rem" }}>{Paragraph}</p>
                 <Form className="o-FormContainer" onSubmit={this.handleSubmit}>
                     <div className="o-ContactInformation">
                         <Input
@@ -71,7 +91,7 @@ class Contact extends React.Component {
                             type="text"
                             name="Name"
                             onChange={this.handleChange}
-                            placeholder="Tu nombre aquí"
+                            placeholder={NameLabel}
                         />
                         <Input
                             className="o-ContainerText"
@@ -79,7 +99,7 @@ class Contact extends React.Component {
                             type="email"
                             name="Email"
                             onChange={this.handleChange}
-                            placeholder="Tu correo aquí"
+                            placeholder={EmailLabel}
                         />
                         <Input
                             className="o-ContainerText"
@@ -87,7 +107,7 @@ class Contact extends React.Component {
                             type="number"
                             name="Phone"
                             onChange={this.handleChange}
-                            placeholder="Tu teléfono aquí"
+                            placeholder={PhoneLabel}
                         />
                     </div>
                     <Input
@@ -96,9 +116,9 @@ class Contact extends React.Component {
                         type="textarea"
                         name="Message"
                         onChange={this.handleChange}
-                        placeholder="Tu mensaje aquí"
+                        placeholder={MessageLabel}
                     />
-                    <BstButton className="o-ButtonSend">Enviar</BstButton>
+                    <BstButton className="o-ButtonSend">{Button}</BstButton>
 
                 </Form>
 
@@ -124,23 +144,23 @@ class Contact extends React.Component {
 
                         <div className="o-Group1">
                             <div className="o-Info">
-                                <h3>Dirección:</h3>
-                                <h5>Edificio Torre de Cali Oficinas, Cali – Colombia</h5>
+                <h3>{TitleDirection}</h3>
+                                <h5>{Direction}</h5>
                             </div>
                             <div className="o-Info">
-                                <h3>Email:</h3>
-                                <h5>info@bambooanalytics.com.co</h5>
+                <h3>{TitleEmail}</h3>
+                <h5>{Email}</h5>
                             </div>
                         </div>
                         <div className="o-Group1">
                             <div className="o-Info">
-                                <h3>Teléfono: </h3>
-                                <h5>(+57) (2) 4854614</h5>
+                <h3>{TitlePhone}</h3>
+                <h5>{Phone}</h5>
                             </div >
                             <div className="o-Info">
-                                <h3>Horario de oficina:</h3>
-                                <h5 id="h5">Lunes – Viernes</h5>
-                                <h5 id="h52">8am-12pm y 1pm-6pm</h5>
+                <h3>{TitleAtentionHour}</h3>
+                <h5 id="h5">{Day}</h5>
+                <h5 id="h52">{Hour}</h5>
                             </div>
                         </div>
                     </div>

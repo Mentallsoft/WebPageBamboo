@@ -52,53 +52,53 @@ class Services extends React.Component {
             Object.map(
                 (Info, Key) =>
 
-                <div className="o-FullContainerServices">
-                <h1>Servicios</h1>
+                    <div className="o-FullContainerServices">
+                        <h1>{Info.TitleServices}</h1>
 
-                <div className="o-Card">
+                        <div className="o-Card">
 
-                    {Info.Services.map(
-                        (Info, key) =>
-                            <div
-                                className="o-ContainerCardService"
-                                onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}
-                            >
-                                <CardService
-                                    Service={Info.Title}
-                                    ServiceDesc={Info.Paragraph}
-                                    Color={Info.Color}
-                                    Image={Info.Image}
-                                />
+                            {Info.Services.map(
+                                (Info, key) =>
+                                    <div
+                                        className="o-ContainerCardService"
+                                        onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}
+                                    >
+                                        <CardService
+                                            Service={Info.Title}
+                                            ServiceDesc={Info.Paragraph}
+                                            Color={Info.Color}
+                                            Image={Info.Image}
+                                        />
 
-                            </div>
-                    )}
-                </div>
+                                    </div>
+                            )}
+                        </div>
 
-                <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
-                    //Styles PopUp
-                    customStyles={{
-                        backgroundColor: "var(--White)",
-                        width: "90vw",
-                        height: "90vh",
-                        padding: "0",
-                        display: "flex",
-                        aligncontent: "center",
-                        justifycontent: "center"
+                        <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
+                            //Styles PopUp
+                            customStyles={{
+                                backgroundColor: "var(--White)",
+                                width: "90vw",
+                                height: "90vh",
+                                padding: "0",
+                                display: "flex",
+                                aligncontent: "center",
+                                justifycontent: "center"
 
-                    }}
-                >
-                    <CardServiceExpand
-                        Service={this.state.titulo}
-                        ServiceDesc={this.state.Desc}
-                        Color={this.state.Color}
-                        Image={this.state.Image}
-                    />
+                            }}
+                        >
+                            <CardServiceExpand
+                                Service={this.state.titulo}
+                                ServiceDesc={this.state.Desc}
+                                Color={this.state.Color}
+                                Image={this.state.Image}
+                            />
 
-                </Rodal>
+                        </Rodal>
 
-            </div>
-                    
-            )  
+                    </div>
+
+            )
         )
     }
 }

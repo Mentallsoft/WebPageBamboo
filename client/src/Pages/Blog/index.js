@@ -10,37 +10,43 @@ import Copyrigth from "../../Components/Copyrigth"
 import Header from "../../Components/Header"
 import AllPosts from "../../Components/AllPosts"
 
-//Images
-import LogoT1 from "../../Images/SVG/LogoTipo.svg"
-import LogoT2 from "../../Images/SVG/Ideas.svg"
-import Bumb from "../../Images/SVG/Bumb.svg"
-
 class Blog extends React.Component {
 
     componentWillMount() {
-          window.scrollTo(0, 0)
-      }
+        window.scrollTo(0, 0)
+    }
 
     render() {
-        return (
-            <div className="o-indexBlog">
-                <Header
-                    Label1={"Inicio"}
-                    URL1={"/"}
-                    Visibility={"hidden"}
-                    Width={0}
-                />
-                <Welcome
-                    ClssNm={"o-LogoTipo3"}
-                    BgImage={"black"}
-                    Bumb={Bumb}
-                    LogoT1={LogoT1}
-                    LogoT2={LogoT2}
-                />
 
-                <AllPosts Idiom={"ES"}/>
-                <Copyrigth />
-            </div>
+        const { InfButton, Images, Posts } = this.props;
+        return (
+
+            InfButton.map(
+                (InfButton, Key) =>
+
+                    Images.map(
+                        (Images, Key) =>
+
+                            <div className="o-indexBlog">
+                                <Header
+                                    Label1={InfButton.Home}
+                                    URL1={"/"}
+                                    Visibility={"hidden"}
+                                    Width={0}
+                                />
+                                <Welcome
+                                    ClssNm={"o-LogoTipo3"}
+                                    BgImage={"black"}
+                                    Bumb={Images.Bumb}
+                                    LogoT1={Images.LogoType}
+                                    LogoT2={Images.LogoTypeBlog}
+                                />
+
+                                <AllPosts Posts={Posts} />
+                                <Copyrigth />
+                            </div>
+                    )
+            )
         )
     }
 }

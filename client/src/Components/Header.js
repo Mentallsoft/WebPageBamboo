@@ -2,8 +2,6 @@
 import React from "react"
 import { Link } from 'react-router-dom';
 
-//Configuration
-
 //Style
 import "./CSS/Header.css"
 

@@ -28,9 +28,13 @@ class Post extends React.Component {
                 {
                     Video ? <iframe src={Video} allowFullScreen /> : null
                 }
+
                 <p>{Content}</p>
+
                 <h6>Escrito por:</h6>
+
                 <CardPresentation Author={Author} Photo={Photo} />
+                
                 <CopyRigth />
             </div>
         )

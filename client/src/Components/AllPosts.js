@@ -4,10 +4,6 @@ import React from 'react'
 //Styles
 import "./CSS/AllPosts.css"
 
-//Information
-import PostsES from "../Configuration/Post.json"
-import PostsEN from "../Configuration/PostIng.json"
-
 //Components
 import CardPost from "./ToAllPost/CardPost"
 
@@ -18,20 +14,16 @@ class AllPost extends React.Component {
 
     render() {
 
-        var a = "";
-
-        if (this.props.Idiom === "ES") {
-            a = PostsES;
-        } else{a = PostsEN;}
+        const { Posts } = this.props;
 
         return (
             <div className="o-AllPost">
 
-                {a.map(
+                {Posts.map(
                     (Post, Key) =>
 
                         <CardPost
-                            image={Post.image}
+                            Image={Post.Image}
                             Video={Post.Video}
                             Author={Post.Author}
                             Photo={Post.Photo}

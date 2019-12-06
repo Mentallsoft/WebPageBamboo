@@ -28,12 +28,12 @@ class Home extends React.Component {
     render() {
 
         //Content of page
-        const { Content, Information } = this.props;
+        const { InfButton, Information, Images } = this.props;
 
         return (
             <div className="o-indexHome">
 
-                {Content.map(
+                {InfButton.map(
                     (Cont, key) =>
                         <Header
                             Label1={Cont.Blog}
@@ -43,14 +43,19 @@ class Home extends React.Component {
                         />
                 )}
 
-                <Welcome //Pendiente por vincular a los archivos Json
-                    BgImage={logo}
-                    ClssNm={"o-LogoTipo"}
-                    LogoT1={LogoT1} />
+                {Images.map(
+                    (Img, Key) =>
+                        <Welcome //Pendiente por vincular a los archivos Json
+                            BgImage={logo}
+                            ClssNm={"o-LogoTipo"}
+                            LogoT1={Img.LogoType} />
+                )}
+
 
                 {Information.map(
                     (Inf, Key) =>
                         <div style={{ padding: "0", margin: "0" }}>
+
                             {Inf.WeAre.map(
                                 (In, k2) =>
                                     <WeAre
@@ -59,23 +64,55 @@ class Home extends React.Component {
                                     />
                             )}
 
-                            <Pilares Object={this.props.Information} />
-                            <Services Object={this.props.Information} />
-
-
                         </div>
                 )}
 
+                <Pilares Object={Information} />
+                <Services Object={Information} />
+                <Clients Object={Information} />
 
                 {this.props.Information.map(
                     (Inf, Key) =>
-                        <Clients Title={Inf.Clients} />
+                        <OurTeam Object={Inf} />
                 )}
 
-                <OurTeam />
-                <section id="Contact">
-                    <Contact />
-                </section>
+                {InfButton.map(
+                    (Cont, key) =>
+
+
+                        Information.map(
+                            (Inf, Key) =>
+
+                                Inf.Contact.map(
+                                    (InfContac, Key) =>
+
+                                        InfContac.Localization.map(
+                                            (InfLocalization, Key) =>
+
+                                                <section id="Contact">
+                                                    <Contact
+                                                        Button={Cont.Submit}
+                                                        Title={InfContac.Title}
+                                                        Paragraph={InfContac.Paragraph}
+                                                        NameLabel={InfContac.NameLabel}
+                                                        EmailLabel={InfContac.EmailLabel}
+                                                        PhoneLabel={InfContac.PhoneLabel}
+                                                        MessageLabel={InfContac.MessageLabel}
+                                                        TitleDirection={InfLocalization.TitleDirection}
+                                                        Direction={InfLocalization.Direction}
+                                                        TitleEmail={InfLocalization.TitleEmail}
+                                                        Email={InfLocalization.Email}
+                                                        TitlePhone={InfLocalization.TitlePhone}
+                                                        Phone={InfLocalization.Phone}
+                                                        TitleAtentionHour={InfLocalization.TitleAtentionHour}
+                                                        Day={InfLocalization.Day}
+                                                        Hour={InfLocalization.Hour}
+                                                    />
+                                                </section>
+                                        )
+                                )
+                        )
+                )}
                 <Copyrigth />
             </div>
         )
