@@ -13,8 +13,8 @@ app.post('/Api/Contact', (req, res) => {
     /*Hasta el momento, este formulario solo ha funcionado con un correo de Gmail, por lo que es necesario crear un correo en esta
     plataforma dedicada al envio de información*/
 
-    const Sender = "efrainps290@gmail.com";
-    const PwdSender = "trierikelpapi";
+    const Sender = "bambooanalyticssas@gmail.com";
+    const PwdSender = "Bamboo2020*";
     const receiver = "efrain.pizarro@bambooanalytics.com.co"
 
     const htmlEmail = 

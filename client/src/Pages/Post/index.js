@@ -7,6 +7,7 @@ import "./CSS/index.css"
 //Components
 import CardPresentation from "../../Components/CardPresentation"
 import CopyRigth from "../../Components/Copyrigth"
+import Rating from "../../Components/Rating"
 
 class Post extends React.Component {
 
@@ -31,11 +32,13 @@ class Post extends React.Component {
 
                 <p>{Content}</p>
 
-                <h6>Escrito por:</h6>
-
+                <Rating/>
+                
+                
                 <CardPresentation Author={Author} Photo={Photo} />
                 
                 <CopyRigth />
+                
             </div>
         )
     }

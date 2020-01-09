@@ -46,6 +46,10 @@
     box-shadow: 10px 10px 9px -6px rgba(0,0,0,0.51);
 }
 
+.o-ButtonSend:hover{
+    background-color: var(--VerdBambooOscure);
+}
+
 .o-Localization{
     width: 96%;
     min-height: 50vh;

@@ -46,7 +46,7 @@ class Contact extends React.Component {
             visible: true
         })
 
-        const form = await axios.post('/Api/Contact', {
+        await axios.post('/Api/Contact', {
             Name, Email, Phone, Message, Subject
         })
 

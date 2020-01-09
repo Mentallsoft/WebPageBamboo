@@ -12,7 +12,14 @@
 .o-CardPresentation img{
     object-fit: cover;
     width: 100%;
+    
+}
+
+#Image{
+    display: flex;
+    align-items: flex-start;
     height: 30vh;
+    overflow: hidden;
 }
 
 .o-CardPresentation h4{

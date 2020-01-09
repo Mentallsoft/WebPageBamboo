@@ -1,7 +1,7 @@
 //Dependecies
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import ReactFlagsSelect from 'react-flags-select';
+import axios from 'axios'
 
 //Components
 import App from "./Components/App";
@@ -31,15 +31,26 @@ class AppRouter extends React.Component {
 
     constructor() {
         super();
-
         this.state = {
-            Language: "US"
+            Language: ""
         }
     }
 
+    //Get information about country where is launch the app
+    getGeoInfo = () => {
+        axios.get('https://ipapi.co/json/').then((response) => {
+            let data = response.data;
+            let Langua = data.languages.substring(0, 2)
+            this.setState({
+                Language: Langua.toUpperCase()
+            });
+        }).catch((error) => {
+            console.log(error);
+        });
+    };
 
-    onSelectFlag = (countryCode) => {
-        this.setState({ Language: countryCode });
+    componentWillMount() {
+        this.getGeoInfo();
     }
 
     render() {
@@ -49,30 +60,21 @@ class AppRouter extends React.Component {
         var Images = "";
         var Posts = "";
 
-        if (this.state.Language === "US") {
-            InfButton = ButtonsEN;
-            Information = InformationEN
-            Images = ImageEN
-            Posts = PostsEN
-        }
-        else {
+        if (this.state.Language === "ES") {
             InfButton = ButtonsES
             Information = InformationES
             Images = ImageES
             Posts = PostsES
         }
-
+        else {
+            InfButton = ButtonsEN;
+            Information = InformationEN
+            Images = ImageEN
+            Posts = PostsEN
+        }
 
         return (
-
             <App>
-                <ReactFlagsSelect
-                    defaultCountry="US"
-                    countries={["US", "CO"]}
-                    customLabels={{ "US": "English", "CO": "Español" }}
-                    onSelect={this.onSelectFlag}
-                    className="Idioms"
-                />
                 <Switch>
                     <Route
                         exact path="/"
@@ -92,10 +94,8 @@ class AppRouter extends React.Component {
                     <Route exact component={Page404} />
                 </Switch>
             </App>
-
         )
     }
 }
-
 
 export default AppRouter;

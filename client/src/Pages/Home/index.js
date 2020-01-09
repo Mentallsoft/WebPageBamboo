@@ -15,15 +15,15 @@ import Copyrigth from "../../Components/Copyrigth"
 //Styles
 import "./CSS/index.css"
 
-//Images
-import logo from "../../Images/PNG/WelcomeBackGround.png"
-import LogoT1 from "../../Images/PNG/LogoTipo.png"
+
 
 class Home extends React.Component {
 
     componentWillMount() {
         window.scrollTo(0, 0)
     }
+
+
 
     render() {
 
@@ -46,7 +46,7 @@ class Home extends React.Component {
                 {Images.map(
                     (Img, Key) =>
                         <Welcome //Pendiente por vincular a los archivos Json
-                            BgImage={logo}
+                            BgImage={Img.Slogan}
                             ClssNm={"o-LogoTipo"}
                             LogoT1={Img.LogoType} />
                 )}
@@ -117,6 +117,7 @@ class Home extends React.Component {
             </div>
         )
     }
+
 }
 
 export default Home;

@@ -8,7 +8,8 @@ class CardPresentation extends React.Component {
         const { Author, Photo } = this.props;
         return (
             <div className="o-CardPresentation">
-                <img src={Photo} alt={Author}/>
+                <div id="Image"><img src={Photo} alt={Author}/></div>
+                
                 <h4>{Author}</h4>
                 <h5>Consultor BI</h5>
                 <h5>Contacto:</h5>
