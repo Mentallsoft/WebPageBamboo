@@ -86,6 +86,7 @@ class AppRouter extends React.Component {
                             />} />
                     <Route exact path="/Blog" render={() =>
                         <Blog
+                            Information={Information}
                             InfButton={InfButton}
                             Images={Images}
                             Posts={Posts}

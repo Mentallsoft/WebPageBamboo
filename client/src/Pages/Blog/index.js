@@ -10,6 +10,8 @@ import Copyrigth from "../../Components/Copyrigth"
 import Header from "../../Components/Header"
 import AllPosts from "../../Components/AllPosts"
 
+import Contact from "../../Components/Contact"
+
 class Blog extends React.Component {
 
     componentWillMount() {
@@ -18,7 +20,7 @@ class Blog extends React.Component {
 
     render() {
 
-        const { InfButton, Images, Posts } = this.props;
+        const { InfButton, Information, Images, Posts } = this.props;
         return (
 
             InfButton.map(
@@ -26,13 +28,12 @@ class Blog extends React.Component {
 
                     Images.map(
                         (Images, Key) =>
-
                             <div className="o-indexBlog">
                                 <Header
                                     Label1={InfButton.Home}
-                                    URL1={"/"}
-                                    Visibility={"hidden"}
-                                    Width={0}
+                                    URL1={"/"}         
+                                    Label2={InfButton.ContactUs}
+                                    Ident={"#Contact"}
                                 />
                                 <Welcome
                                     ClssNm={"o-LogoTipo3"}
@@ -43,6 +44,41 @@ class Blog extends React.Component {
                                 />
 
                                 <AllPosts Posts={Posts} />
+
+                                {Information.map(
+                                    (Inf, Key) =>
+
+                                        Inf.Contact.map(
+                                            (InfContac, Key) =>
+
+                                                InfContac.Localization.map(
+                                                    (InfLocalization, Key) =>
+
+                                                        <section id="Contact">
+                                                            <Contact
+                                                                Button={InfButton.Submit}
+                                                                Title={InfContac.Title}
+                                                                Paragraph={InfContac.Paragraph}
+                                                                NameLabel={InfContac.NameLabel}
+                                                                EmailLabel={InfContac.EmailLabel}
+                                                                PhoneLabel={InfContac.PhoneLabel}
+                                                                MessageLabel={InfContac.MessageLabel}
+                                                                TitleDirection={InfLocalization.TitleDirection}
+                                                                Direction={InfLocalization.Direction}
+                                                                TitleEmail={InfLocalization.TitleEmail}
+                                                                Email={InfLocalization.Email}
+                                                                TitlePhone={InfLocalization.TitlePhone}
+                                                                Phone={InfLocalization.Phone}
+                                                                TitleAtentionHour={InfLocalization.TitleAtentionHour}
+                                                                Day={InfLocalization.Day}
+                                                                Hour={InfLocalization.Hour}
+                                                            />
+                                                        </section>
+                                                )
+                                        )
+                                )
+                                }
+
                                 <Copyrigth />
                             </div>
                     )

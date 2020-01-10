@@ -38,7 +38,7 @@ class Post extends React.Component {
                 <CardPresentation Author={Author} Photo={Photo} />
                 
                 <CopyRigth />
-                
+                    
             </div>
         )
     }
