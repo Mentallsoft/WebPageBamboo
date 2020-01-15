@@ -1,5 +1,6 @@
 //Dependencies
 import React from "react"
+import renderHTML from 'react-render-html'
 
 //Styles
 import "./CSS/index.css"
@@ -16,24 +17,16 @@ class Post extends React.Component {
     }
 
     render() {
-        const { Image, Video, Author, Photo, Category, Date, Title, Content } = this.props.location.state;
-
+        const { Image, Video, Author, Photo, Category, Date, Title, Content, Post } = this.props.location.state;
+ 
         return (
+            
             <div className="o-PostIndex">
-                <img className="o-ImagePost" src={Image} alt="" />
-                <h1>{Title}</h1>
-                <div className="o-ClasificationCardPost" id="Post">
-                    <h6 id="Category">{Category} / </h6>
-                    <h6 id="Date"> / {Date} </h6>
-                </div>
-                {
-                    Video ? <iframe src={Video} allowFullScreen /> : null
-                }
 
-                <p>{Content}</p>
+<h1>{Post.title.rendered}</h1>
+{renderHTML(Post.content.rendered)}
 
                 <Rating/>
-                
                 
                 <CardPresentation Author={Author} Photo={Photo} />
                 

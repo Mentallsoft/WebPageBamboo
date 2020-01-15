@@ -17,21 +17,24 @@ class AllPost extends React.Component {
         const { Posts } = this.props;
 
         return (
+
             <div className="o-AllPost">
 
                 {Posts.map(
                     (Post, Key) =>
 
                         <CardPost
+                            Key={Key}
+                            Title={Post.title.rendered}
                             Image={Post.Image}
                             Video={Post.Video}
-                            Author={Post.Author}
+                            Author={Post._embedded.author[0].name}
                             Photo={Post.Photo}
-                            Title={Post.Title}
                             Category={Post.Category}
                             Date={Post.Date}
                             Resumen={Post.Resumen}
                             Content={Post.Content}
+                            Post={Post}
                         />
                 )}
 

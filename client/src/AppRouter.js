@@ -19,20 +19,23 @@ import "./AppRouter.css"
 import ButtonsES from "./Configuration/ES/Buttons.json"
 import InformationES from "./Configuration/ES/Information.json"
 import ImageES from "./Configuration/ES/Images.json"
-import PostsES from "./Configuration/ES/Post.json"
 
 //EN
 import ButtonsEN from "./Configuration/EN/Buttons.json"
 import InformationEN from "./Configuration/EN/Information.json"
 import ImageEN from "./Configuration/EN/Images.json"
-import PostsEN from "./Configuration/EN/Post.json"
+
+import Loading from "../src/Images/GIF/Loading.gif"
 
 class AppRouter extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            Language: ""
+            Language: "",
+            wpPost: [],
+            Alert: "Todavía no hay publicaciones",
+            LoadingPost: Loading
         }
     }
 
@@ -49,8 +52,23 @@ class AppRouter extends React.Component {
         });
     };
 
+    GetPosts = () => {
+
+        const wpURL = 'https://www.bambooanalytics.com.co';
+
+        axios.get(`${wpURL}/wp-json/wp/v2/posts?_embed`)
+            .then(res => {
+                console.warn(res.data);
+                console.log("Funcionó")
+                this.setState({ wpPost: res.data, LoadingPost: "" })
+            })
+            .catch(error => this.setState({LoadingPost: ""}))
+
+    }
+
     componentWillMount() {
         this.getGeoInfo();
+        this.GetPosts();
     }
 
     render() {
@@ -64,13 +82,13 @@ class AppRouter extends React.Component {
             InfButton = ButtonsES
             Information = InformationES
             Images = ImageES
-            Posts = PostsES
+            Posts = this.state.wpPost
         }
         else {
             InfButton = ButtonsEN;
             Information = InformationEN
             Images = ImageEN
-            Posts = PostsEN
+            Posts = this.state.wpPost
         }
 
         return (
@@ -90,6 +108,9 @@ class AppRouter extends React.Component {
                             InfButton={InfButton}
                             Images={Images}
                             Posts={Posts}
+                            Language = {this.state.Language}
+                            Alert={this.state.Alert}
+                            LoadingPost={this.state.LoadingPost}
                         />} />
                     <Route exact path="/Post" component={Post} />
                     <Route exact component={Page404} />

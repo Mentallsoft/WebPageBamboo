@@ -9,10 +9,16 @@ import Welcome from "../../Components/Welcome"
 import Copyrigth from "../../Components/Copyrigth"
 import Header from "../../Components/Header"
 import AllPosts from "../../Components/AllPosts"
-
 import Contact from "../../Components/Contact"
+import Post from "../Post"
 
 class Blog extends React.Component {
+
+
+    constructor(props) {
+        super(props);
+
+    }
 
     componentWillMount() {
         window.scrollTo(0, 0)
@@ -20,9 +26,10 @@ class Blog extends React.Component {
 
     render() {
 
-        const { InfButton, Information, Images, Posts } = this.props;
-        return (
+        const { InfButton, Information, Images, Posts, Alert, LoadingPost } = this.props;
 
+
+        return (
             InfButton.map(
                 (InfButton, Key) =>
 
@@ -31,7 +38,7 @@ class Blog extends React.Component {
                             <div className="o-indexBlog">
                                 <Header
                                     Label1={InfButton.Home}
-                                    URL1={"/"}         
+                                    URL1={"/"}
                                     Label2={InfButton.ContactUs}
                                     Ident={"#Contact"}
                                 />
@@ -43,7 +50,15 @@ class Blog extends React.Component {
                                     LogoT2={Images.LogoTypeBlog}
                                 />
 
-                                <AllPosts Posts={Posts} />
+                                {
+                                    Posts.length ?
+                                        LoadingPost ?
+                                            <div className="Loading">
+                                                <img id="o-LoadingImg" src={LoadingPost} alt="Loading" />
+                                            </div> :
+                                            <AllPosts Posts={Posts} /> :
+                                        <h2 style={{ color: "gray" }}>{Alert}</h2>
+                                }
 
                                 {Information.map(
                                     (Inf, Key) =>

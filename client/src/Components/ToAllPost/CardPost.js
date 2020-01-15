@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import renderHTML from 'react-render-html'
 
 import "./CSS/CardPost.css"
 
@@ -7,7 +8,7 @@ class CardPost extends React.Component {
 
     render() {
 
-        const {Image, Video, Author, Photo, Category, Date, Title, Content, Resumen} = this.props;
+        const {Image, Video, Author, Photo, Category, Date, Title, Content, Resumen, Post} = this.props;
 
         return (
             <div className="o-CardPost">
@@ -22,7 +23,8 @@ class CardPost extends React.Component {
                             Category: Category,
                             Date: Date,
                             Title: Title,
-                            Content: Content
+                            Content: Content,
+                            Post: Post
                         }
                     }}
                 >
@@ -37,7 +39,7 @@ class CardPost extends React.Component {
                                 <h6> / {Date} </h6>
                             </div>
                             <div className="o-ParagraphCardPost">
-                                <p>{Resumen}</p>
+                                {renderHTML(Post.excerpt.rendered)}
                             </div>
                         </div>
 
