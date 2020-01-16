@@ -1,6 +1,8 @@
 .o-FullContainerOurTeam{
     width: 100vw;
     background-color: var(--Black);
+
+    position: relative;
 }
 
 .o-ContainerPhotoTeam{

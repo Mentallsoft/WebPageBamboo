@@ -4,4 +4,11 @@
     
     flex-direction: column;
     align-content: center;
+
+    background-color: white;
+    position: relative;
+}
+
+@media (max-width: 600px){
+    
 }

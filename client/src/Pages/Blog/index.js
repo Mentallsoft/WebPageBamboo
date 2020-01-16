@@ -10,15 +10,8 @@ import Copyrigth from "../../Components/Copyrigth"
 import Header from "../../Components/Header"
 import AllPosts from "../../Components/AllPosts"
 import Contact from "../../Components/Contact"
-import Post from "../Post"
 
 class Blog extends React.Component {
-
-
-    constructor(props) {
-        super(props);
-
-    }
 
     componentWillMount() {
         window.scrollTo(0, 0)
@@ -26,7 +19,7 @@ class Blog extends React.Component {
 
     render() {
 
-        const { InfButton, Information, Images, Posts, Alert, LoadingPost } = this.props;
+        const { InfButton, Information, Images, Posts, LoadingPost, GifUp} = this.props;
 
 
         return (
@@ -48,16 +41,19 @@ class Blog extends React.Component {
                                     Bumb={Images.Bumb}
                                     LogoT1={Images.LogoType}
                                     LogoT2={Images.LogoTypeBlog}
+                                    GifUp={GifUp}
                                 />
 
                                 {
-                                    Posts.length ?
                                         LoadingPost ?
                                             <div className="Loading">
                                                 <img id="o-LoadingImg" src={LoadingPost} alt="Loading" />
                                             </div> :
-                                            <AllPosts Posts={Posts} /> :
-                                        <h2 style={{ color: "gray" }}>{Alert}</h2>
+                                            <AllPosts 
+                                            Posts={Posts}
+                                            Information={Information}
+                                            InfButton={InfButton}
+                                            /> 
                                 }
 
                                 {Information.map(

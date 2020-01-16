@@ -1,5 +1,7 @@
 .o-FullContainerClients{
 background-color: var(--GrayClare);
+
+position: relative;
 }
 
 .o-FullContainerClients h1{

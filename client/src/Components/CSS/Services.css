@@ -1,6 +1,9 @@
 .o-FullContainerServices{
     min-height: 100vh;
     width: 100vw;
+
+    background-color: var(--White);
+    position: relative;
 }
 
 .o-FullContainerServices h1{

@@ -164,11 +164,11 @@ class Contact extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="o-Map">
+                    {/*<div className="o-Map">
 
                         PARA UTILIZAR EL MAPA HAY QUE UTILIZAR TARJETA DE CREDITO
 
-                    </div>
+                </div>*/}
                 </div>
 
             </div>//Final del div global

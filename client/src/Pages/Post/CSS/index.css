@@ -8,57 +8,122 @@
     overflow: hidden;
 }
 
-.o-PostIndex h1{
-    width: 100%;
-    color: var(--White);
-    padding: 1rem 0;
-    margin: 0;
-    background-color: var(--Black);
-}
-
-.o-PostIndex h6{
-    color: var(--Black);
-}
-
-#Post{
-background-color: var(--Black);
-justify-content: center;
-padding-bottom: 1rem;
-border: none;
-}
-
-#Post #Date{
-    color: var(--White);
-}
-
 .o-PostIndex p{
     color: var(--Black);
-    margin-bottom: 2rem;
+    
     text-align: justify;
-    padding: 0 16rem;
+    padding: 0 10vw;
 }
 
-.o-PostIndex iframe{
-    width: 60vw;  
-    height: 70vh;
-    padding: 0.3rem;
-    background-color: var(--Black);
-    border: none;
+.o-PostContainerImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+
 }
 
 .o-ImagePost{
+    position: absolute;
+    z-index: 0;
+    top: 0vh;
     object-fit: cover;
     width: 100%;
-    height: 30vh;
+    filter: brightness(0.2);
+    
+}
+
+#Titulo{
+    text-align: left;
+    font-size: 4rem;
+    color: var(--White);
+    margin: 0;
+}
+
+#Autor{
+    text-align: left;
+    margin: 0;
+    color: var(--VerdBamboo);
+}
+
+#TitleContent{
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+    padding: 2rem 10vw;
+    z-index: 3;
+}
+
+#BodyPost h1{
+    color: var(--Black);
+}
+
+#BodyPost h2{
+    color: var(--Black);
+}
+
+#BodyPost h3{
+    color: var(--Black);
+}
+
+#BodyPost h4{
+    color: var(--Black);
+}
+
+#BodyPost h5{
+    color: var(--Black);
+}
+
+#BodyPost h6{
+    color: var(--Black);
+}
+
+iframe{
+    width: 100%;
+    height: 90vh;
 }
 
 @media(max-width: 600px){
-    .o-PostIndex iframe{
-        width: 100vw;  
-        height: 30vh;
-    }
-
+ 
     .o-PostIndex p{
         padding: 0 1rem;
+    }
+
+    .o-PostContainerImage{
+        height: 40vh;    
+    }
+
+    .o-ImagePost{ 
+        height: 100%;       
+    }
+
+    #Titulo{
+        text-align: left;
+        font-size: 1.5rem;
+        color: var(--White);
+        margin: 0;
+    }
+
+    #TitleContent{  
+        padding: 2rem 1rem;        
+    }
+
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+  
+}
+
+@media(min-width: 601px) and (max-width: 1000px){
+
+    #Titulo{
+        font-size: 2rem;
+        
     }
 }

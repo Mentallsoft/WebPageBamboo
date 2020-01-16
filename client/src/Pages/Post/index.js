@@ -6,9 +6,10 @@ import renderHTML from 'react-render-html'
 import "./CSS/index.css"
 
 //Components
-import CardPresentation from "../../Components/CardPresentation"
 import CopyRigth from "../../Components/Copyrigth"
 import Rating from "../../Components/Rating"
+import Contact from "../../Components/Contact"
+import Header from "../../Components/Header"
 
 class Post extends React.Component {
 
@@ -17,21 +18,71 @@ class Post extends React.Component {
     }
 
     render() {
-        const { Image, Video, Author, Photo, Category, Date, Title, Content, Post } = this.props.location.state;
- 
+
+        const { FeatImage, Author, Title, Content, Information, InfButton } = this.props.location.state;
+
         return (
-            
+
             <div className="o-PostIndex">
-
-<h1>{Post.title.rendered}</h1>
-{renderHTML(Post.content.rendered)}
-
-                <Rating/>
                 
-                <CardPresentation Author={Author} Photo={Photo} />
-                
+                <Header
+                    Visibility2 = {"hidden"}
+                    Width2 = {"0"}
+                    Label2={InfButton.ContactUs}
+                    Ident={"#Contact"}
+                />
+
+                <div className="o-PostContainerImage">
+
+                    <img className="o-ImagePost" src={FeatImage} alt="" />
+                    <div id="TitleContent">
+                        <h1 id="Titulo">{Title}</h1>
+                        <h6 id="Autor" >{Author}</h6>
+                    </div>
+
+                </div>
+                <div id="BodyPost">
+                    {renderHTML(Content)}
+                </div>
+
+
+                <Rating />
+
+                {Information.map(
+                    (Inf, Key) =>
+
+                        Inf.Contact.map(
+                            (InfContac, Key) =>
+
+                                InfContac.Localization.map(
+                                    (InfLocalization, Key) =>
+
+                                        <section id="Contact">
+                                            <Contact
+                                                Button={InfButton.Submit}
+                                                Title={InfContac.Title}
+                                                Paragraph={InfContac.Paragraph}
+                                                NameLabel={InfContac.NameLabel}
+                                                EmailLabel={InfContac.EmailLabel}
+                                                PhoneLabel={InfContac.PhoneLabel}
+                                                MessageLabel={InfContac.MessageLabel}
+                                                TitleDirection={InfLocalization.TitleDirection}
+                                                Direction={InfLocalization.Direction}
+                                                TitleEmail={InfLocalization.TitleEmail}
+                                                Email={InfLocalization.Email}
+                                                TitlePhone={InfLocalization.TitlePhone}
+                                                Phone={InfLocalization.Phone}
+                                                TitleAtentionHour={InfLocalization.TitleAtentionHour}
+                                                Day={InfLocalization.Day}
+                                                Hour={InfLocalization.Hour}
+                                            />
+                                        </section>
+                                )
+                        )
+                )
+                }
                 <CopyRigth />
-                    
+
             </div>
         )
     }

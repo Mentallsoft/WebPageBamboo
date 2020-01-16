@@ -1,15 +1,27 @@
 
 
 .o-FullContainerCardPost{
-    width: 97vw;
-    min-height: 30vh;
+    width: 90vw;
+    transition: 0.5s;
+
+    min-height: 23vh;
+        
     display: flex;
     flex-direction: row;
-    /*background-color: var(--YellowBamboo);*/
+    background-color: var(--White);
     text-decoration: none;
     list-style: none;
     margin: 1rem auto;
-    
+
+    /*Shadows*/
+    -webkit-box-shadow: 4px 7px 8px 0px rgba(0,0,0,0.32);
+    -moz-box-shadow: 4px 7px 8px 0px rgba(0,0,0,0.32);
+    box-shadow: 4px 7px 8px 0px rgba(0,0,0,0.32);
+}
+
+.o-FullContainerCardPost:hover{
+    width: 97vw;
+    transition: 0.5s;
 }
 
 .o-FullContainerCardPost:hover{
@@ -55,6 +67,19 @@
     color: var(--VerdBamboo);
 }
 
+.o-ParagraphCardPost a{
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.o-ParagraphCardPost h3{
+    color: var(--VerdBamboo);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
 .o-ParagraphCardPost p{
     margin: 0.5rem 0 0 0;
     height: 100%;
@@ -73,8 +98,16 @@
         width: 100%;
         height: auto;
         flex-direction: column;
-        margin: 0 0 3rem;
-        border: black solid;
+        margin: 0 0 2rem;
+
+        /*Shadows*/
+        -webkit-box-shadow: -2px 0px 18px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: -2px 0px 18px -3px rgba(0,0,0,0.75);
+        box-shadow: -2px 0px 18px -3px rgba(0,0,0,0.75);
+    }
+
+    .o-FullContainerCardPost:hover{
+        width: 100%;
     }
 
     .o-ParagraphCardPost p{

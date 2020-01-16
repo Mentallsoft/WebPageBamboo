@@ -28,7 +28,7 @@ class Home extends React.Component {
     render() {
 
         //Content of page
-        const { InfButton, Information, Images } = this.props;
+        const { InfButton, Information, Images, GifUp } = this.props;
 
         return (
             <div className="o-indexHome">
@@ -48,7 +48,9 @@ class Home extends React.Component {
                         <Welcome //Pendiente por vincular a los archivos Json
                             BgImage={Img.Slogan}
                             ClssNm={"o-LogoTipo"}
-                            LogoT1={Img.LogoType} />
+                            LogoT1={Img.LogoType} 
+                            GifUp={GifUp}
+                            />
                 )}
 
 

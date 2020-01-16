@@ -26,6 +26,7 @@ import InformationEN from "./Configuration/EN/Information.json"
 import ImageEN from "./Configuration/EN/Images.json"
 
 import Loading from "../src/Images/GIF/Loading.gif"
+import Up from "../src/Images/GIF/UP.gif"
 
 class AppRouter extends React.Component {
 
@@ -101,6 +102,7 @@ class AppRouter extends React.Component {
                                 InfButton={InfButton}
                                 Information={Information}
                                 Images={Images}
+                                GifUp={Up}
                             />} />
                     <Route exact path="/Blog" render={() =>
                         <Blog
@@ -111,6 +113,7 @@ class AppRouter extends React.Component {
                             Language = {this.state.Language}
                             Alert={this.state.Alert}
                             LoadingPost={this.state.LoadingPost}
+                            GifUp={Up}
                         />} />
                     <Route exact path="/Post" component={Post} />
                     <Route exact component={Page404} />

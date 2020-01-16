@@ -4,25 +4,29 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .o-LogoTipo{
     width: 30vw;
     margin: 20vh 10vw 0 10vw;
+    position: absolute;
 }
 
 .o-LogoTipo3{
     width: 30vw;
     margin: 20vh 10vw 0 10vw;
+    position: absolute;
 }
 
 .o-LogoTipo2{
     width: 0;
     visibility: hidden;
+    position: absolute;
 }
 
 .o-Bumb{
@@ -30,6 +34,15 @@
     margin: 0 20vw 0 10vw;
     left: 55vw;
     position: absolute;
+}
+
+.o-GifUp{
+    visibility: hidden;
+}
+
+#o-VideoBg{
+    position: fixed;
+    filter: grayscale(1);
 }
 
 /*Para pantallas pequeñas*/
@@ -65,8 +78,12 @@
         visibility: hidden;
     }
 
-
-
-
+    .o-GifUp{
+        visibility: visible;
+        position: absolute;
+        height: 2rem;
+        top: 90%
+    
+    }
 
 }

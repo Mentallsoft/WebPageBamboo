@@ -13,11 +13,12 @@ class Rating extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{margin: "2rem 0 4rem"}}>
                 <BeautyStars
+                    size={"25px"}
                     value={this.state.value}
                     onChange={value => this.setState({ value })}
-                />               
+                />
             </div>
 
         );

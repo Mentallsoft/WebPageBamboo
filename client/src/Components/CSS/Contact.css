@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: relative;
+    background-color: var(--White);
     
 }
 
@@ -40,14 +43,14 @@
 .o-ButtonSend{
     padding: 0.5rem 6rem;
     border: none;
-    background-color: var(--VerdBamboo);
+    background-color: var(--VerdBambooOscure);
     color: var(--White);
     font-family: 'Archivo Narrow', sans-serif;
     box-shadow: 10px 10px 9px -6px rgba(0,0,0,0.51);
 }
 
 .o-ButtonSend:hover{
-    background-color: var(--VerdBambooOscure);
+    background-color: var(--VerdBamboo);
 }
 
 .o-Localization{

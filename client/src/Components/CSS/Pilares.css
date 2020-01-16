@@ -1,11 +1,14 @@
 .o-FullContainerPilares{
     background-color: var(--Black);
+    background-color: transparent;
     width: 100vw;
     min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 .o-PilarsContainer{

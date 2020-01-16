@@ -7,15 +7,15 @@ import "./CSS/AllPosts.css"
 //Components
 import CardPost from "./ToAllPost/CardPost"
 
-import "react-pagination-library/build/css/index.css"
-
+//Images
+import DefaultImage from "../Images/PNG/DefaultImage.png"
 
 class AllPost extends React.Component {
 
     render() {
 
-        const { Posts } = this.props;
-
+        const { Posts, Information, InfButton} = this.props;
+        
         return (
 
             <div className="o-AllPost">
@@ -25,16 +25,17 @@ class AllPost extends React.Component {
 
                         <CardPost
                             Key={Key}
-                            Title={Post.title.rendered}
-                            Image={Post.Image}
-                            Video={Post.Video}
+
                             Author={Post._embedded.author[0].name}
-                            Photo={Post.Photo}
-                            Category={Post.Category}
-                            Date={Post.Date}
-                            Resumen={Post.Resumen}
-                            Content={Post.Content}
-                            Post={Post}
+                            FeatImage={Post.featured_media === 0 ? DefaultImage: Post._embedded['wp:featuredmedia']['0'].source_url}
+                            Title={Post.title.rendered}
+                            Content={Post.content.rendered}
+                            Resumen={Post.excerpt.rendered}
+                            Category={Post._embedded['wp:term']['0']['0'].name}
+                            Date={Post.date}
+
+                            Information={Information}
+                            InfButton={InfButton}
                         />
                 )}
 
