@@ -10,8 +10,10 @@
     position: relative;
 }
 
-.o-CopyRContainer h4{
+.o-CopyRContainer h6{
     margin: 0;
+    color: gray;
+    font-weight: normal;
 }
 
 .o-LogoB{

@@ -7,7 +7,7 @@ const Copyrigth = () =>{
     return(
     <div className="o-CopyRContainer">
         <img className="o-LogoB" src={Logo} alt=""/>
-        <h4>© 2017 Bamboo analytics. All Rights Reserved</h4>
+        <h6>© {(new Date().getFullYear())} Bamboo analytics. All Rights Reserved</h6>
     </div>
     )
 }

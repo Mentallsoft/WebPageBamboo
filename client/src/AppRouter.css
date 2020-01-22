@@ -1,21 +1,43 @@
-.Idioms{
-    width: 10rem;
-    position: fixed;
-    left: 96vw;
-    top: 0;
-    z-index: 999999;
-    background-color: transparent;
-    transition: 0.3s;
+#LanguageSelector{
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 999;
+background-color: transparent;
+display: flex;
+border: none;
+cursor: pointer;
+outline: none;
 }
 
-.Idioms:hover{
-    left: 90vw;
+#LanguageSelector img{
+    width: 3vw;
+    transition: 0.1s;
+}
+
+#LanguageSelector img:hover{
+width: 5vw;
+transition: 0.1s;
 }
 
 @media(max-width: 600px){
-    .Idioms{
-        left: 90vw;
-        top: 20vh;
-        transition: 0.3s;
+    #LanguageSelector{
+        top: 15%;
+        bottom: inherit;
+        padding: 0 0 0 0.1rem;
+        transition: 0.5s;
+    }
+
+    #LanguageSelector:hover{
+        padding-right: 1rem;
+        transition: 0.5s;
+    }
+
+    #LanguageSelector img{
+        width: 5vw;
+    }
+
+    #LanguageSelector img:hover{
+        width: 10vw;
     }
 }

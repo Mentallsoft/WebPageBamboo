@@ -7,6 +7,8 @@ import "./CSS/OurTeam.css"
 //Component
 import Photos from "./ToOurTeams/Photos"
 
+import P from '../Images/SVG/P1.svg'
+
 class OurTeam extends React.Component {
 
     render() {

@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "axios": "^0.19.0",
+    "commentbox.io": "^2.0.0",
     "google-map-react": "^1.1.5",
     "google-maps-react": "^2.0.2",
     "moment": "^2.24.0",

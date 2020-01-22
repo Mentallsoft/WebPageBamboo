@@ -51,7 +51,7 @@ class AppRouter extends React.Component {
         }).catch((error) => {
             console.log(error);
         });
-    };
+    }
 
     GetPosts = () => {
 
@@ -63,13 +63,19 @@ class AppRouter extends React.Component {
                 console.log("Funcionó")
                 this.setState({ wpPost: res.data, LoadingPost: "" })
             })
-            .catch(error => this.setState({LoadingPost: ""}))
+            .catch(error => this.setState({ LoadingPost: "" }))
 
     }
 
     componentWillMount() {
         this.getGeoInfo();
         this.GetPosts();
+    }
+
+    ChangeLanguage = () => {
+        if (this.state.Language === "ES") {
+            this.setState({ Language: "EN" })
+        } else { this.setState({ Language: "ES" }) }
     }
 
     render() {
@@ -94,6 +100,13 @@ class AppRouter extends React.Component {
 
         return (
             <App>
+                {Images.map(
+                    (Imgs, key) =>
+                        <button id="LanguageSelector" onClick={this.ChangeLanguage} title={Imgs.Text}>
+                            <img src={Imgs.Language} alt=""/>
+                            </button>
+                )}
+
                 <Switch>
                     <Route
                         exact path="/"
@@ -110,7 +123,7 @@ class AppRouter extends React.Component {
                             InfButton={InfButton}
                             Images={Images}
                             Posts={Posts}
-                            Language = {this.state.Language}
+                            Language={this.state.Language}
                             Alert={this.state.Alert}
                             LoadingPost={this.state.LoadingPost}
                             GifUp={Up}

@@ -32,6 +32,7 @@ class AllPost extends React.Component {
                             Content={Post.content.rendered}
                             Resumen={Post.excerpt.rendered}
                             Category={Post._embedded['wp:term']['0']['0'].name}
+                            Comments={Post._embedded.replies ? Post._embedded['replies']['0']: false}
                             Date={Post.date}
 
                             Information={Information}

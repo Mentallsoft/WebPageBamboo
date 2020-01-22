@@ -46,7 +46,7 @@ class Home extends React.Component {
                 {Images.map(
                     (Img, Key) =>
                         <Welcome //Pendiente por vincular a los archivos Json
-                            BgImage={Img.Slogan}
+                            Slogan={Img.Slogan}
                             ClssNm={"o-LogoTipo"}
                             LogoT1={Img.LogoType} 
                             GifUp={GifUp}

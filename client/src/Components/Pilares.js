@@ -22,7 +22,7 @@ class Pilares extends React.Component {
                         <h1>{Inf.TitlePilares}</h1>
                         <div className="o-PilarsContainer">
 
-                            <Accordion className="Acordion" allowMultiple={false} isHovered={true}>
+                            <Accordion className="Acordion" allowMultiple={true} isHovered={true} allActive={true}>
                                 {
                                     Inf.Pilars.map(
                                         (Color, key) =>

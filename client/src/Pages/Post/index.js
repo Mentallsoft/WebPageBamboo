@@ -10,6 +10,7 @@ import CopyRigth from "../../Components/Copyrigth"
 import Rating from "../../Components/Rating"
 import Contact from "../../Components/Contact"
 import Header from "../../Components/Header"
+import Prueba from "./Prueba"
 
 class Post extends React.Component {
 
@@ -19,15 +20,15 @@ class Post extends React.Component {
 
     render() {
 
-        const { FeatImage, Author, Title, Content, Information, InfButton } = this.props.location.state;
+        const { FeatImage, Author, Title, Content, Comments, Information, InfButton } = this.props.location.state;
 
         return (
 
             <div className="o-PostIndex">
-                
+
                 <Header
-                    Visibility2 = {"hidden"}
-                    Width2 = {"0"}
+                    Visibility2={"hidden"}
+                    Width2={"0"}
                     Label2={InfButton.ContactUs}
                     Ident={"#Contact"}
                 />
@@ -47,6 +48,7 @@ class Post extends React.Component {
 
 
                 <Rating />
+                <Prueba Comments={Comments}/>
 
                 {Information.map(
                     (Inf, Key) =>
@@ -81,6 +83,7 @@ class Post extends React.Component {
                         )
                 )
                 }
+                
                 <CopyRigth />
 
             </div>

@@ -7,8 +7,7 @@
 
 .o-ContainerPhotoTeam{
     width: 100%;
-    
-    background-color: var(--GrayOscure);
+    background-color: var(--White);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -29,6 +29,13 @@
     position: absolute;
 }
 
+.o-Slogan{
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 .o-Bumb{
     height: 90vh;
     margin: 0 20vw 0 10vw;
@@ -70,6 +77,12 @@
     .o-LogoTipo2{
         visibility: visible;
         width: 70vw;
+    }
+
+    .o-Slogan{
+        width: 80vw;
+        top: 68%;
+        left: auto;
     }
 
     .o-Bumb{
