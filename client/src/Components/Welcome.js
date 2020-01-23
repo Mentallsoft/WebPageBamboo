@@ -6,7 +6,6 @@ import "./CSS/Welcome.css"
 
 //Imagenes
 import Fondo from "../Videos/Fondo.mp4"
-import Slog from "../Images/PNG/ES_Slogan.png"
 
 class Welcome extends React.Component {
 

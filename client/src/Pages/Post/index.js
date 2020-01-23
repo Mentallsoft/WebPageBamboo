@@ -6,7 +6,7 @@ import renderHTML from 'react-render-html'
 import "./CSS/index.css"
 
 //Components
-import CopyRigth from "../../Components/Copyrigth"
+import Copyrigth from "../../Components/Copyrigth"
 import Rating from "../../Components/Rating"
 import Contact from "../../Components/Contact"
 import Header from "../../Components/Header"
@@ -48,7 +48,7 @@ class Post extends React.Component {
 
 
                 <Rating />
-                <Prueba Comments={Comments}/>
+                <Prueba Comments={Comments} />
 
                 {Information.map(
                     (Inf, Key) =>
@@ -68,6 +68,8 @@ class Post extends React.Component {
                                                 EmailLabel={InfContac.EmailLabel}
                                                 PhoneLabel={InfContac.PhoneLabel}
                                                 MessageLabel={InfContac.MessageLabel}
+                                            />
+                                            <Copyrigth
                                                 TitleDirection={InfLocalization.TitleDirection}
                                                 Direction={InfLocalization.Direction}
                                                 TitleEmail={InfLocalization.TitleEmail}
@@ -83,9 +85,6 @@ class Post extends React.Component {
                         )
                 )
                 }
-                
-                <CopyRigth />
-
             </div>
         )
     }

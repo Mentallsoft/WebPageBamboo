@@ -19,7 +19,7 @@ class Blog extends React.Component {
 
     render() {
 
-        const { InfButton, Information, Images, Posts, LoadingPost, GifUp} = this.props;
+        const { InfButton, Information, Images, Posts, LoadingPost, GifUp } = this.props;
 
 
         return (
@@ -45,15 +45,15 @@ class Blog extends React.Component {
                                 />
 
                                 {
-                                        LoadingPost ?
-                                            <div className="Loading">
-                                                <img id="o-LoadingImg" src={LoadingPost} alt="Loading" />
-                                            </div> :
-                                            <AllPosts 
+                                    LoadingPost ?
+                                        <div className="Loading">
+                                            <img id="o-LoadingImg" src={LoadingPost} alt="Loading" />
+                                        </div> :
+                                        <AllPosts
                                             Posts={Posts}
                                             Information={Information}
                                             InfButton={InfButton}
-                                            /> 
+                                        />
                                 }
 
                                 {Information.map(
@@ -74,6 +74,8 @@ class Blog extends React.Component {
                                                                 EmailLabel={InfContac.EmailLabel}
                                                                 PhoneLabel={InfContac.PhoneLabel}
                                                                 MessageLabel={InfContac.MessageLabel}
+                                                            />
+                                                            <Copyrigth
                                                                 TitleDirection={InfLocalization.TitleDirection}
                                                                 Direction={InfLocalization.Direction}
                                                                 TitleEmail={InfLocalization.TitleEmail}
@@ -89,8 +91,6 @@ class Blog extends React.Component {
                                         )
                                 )
                                 }
-
-                                <Copyrigth />
                             </div>
                     )
             )

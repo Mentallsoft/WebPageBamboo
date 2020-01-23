@@ -1,10 +1,27 @@
+.o-TermAndConditions{
+    margin-bottom: 1rem;
+}
+
+.o-TermAndConditions label{
+    color: var(--VerdBambooOscure);
+}
+
+.o-TermAndConditions a{
+    color: var(--VerdBambooOscure);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.o-TermAndConditions a:hover{
+    color: var(--VerdBamboo);
+}
+
 .o-FullContainerContact{
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     position: relative;
     background-color: var(--White);
     
@@ -113,9 +130,9 @@
 /*Para pantallas pequeñas*/
 @media (max-width: 600px) {
 
-    .o-Localization{
-        flex-direction: column;
-    }
+    .o-FormContainer{
+        margin-bottom: 4rem;
+    } 
 
     .o-InfoContact{
         flex-direction: column;

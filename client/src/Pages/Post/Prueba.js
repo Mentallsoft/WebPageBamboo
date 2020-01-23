@@ -3,10 +3,6 @@ import ReactRenderHTML from 'react-render-html'
 import axios from 'axios'
 
 class Prueba extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     PostsComments = () => {
         console.log("Comentando")

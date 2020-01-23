@@ -48,9 +48,9 @@ class Home extends React.Component {
                         <Welcome //Pendiente por vincular a los archivos Json
                             Slogan={Img.Slogan}
                             ClssNm={"o-LogoTipo"}
-                            LogoT1={Img.LogoType} 
+                            LogoT1={Img.LogoType}
                             GifUp={GifUp}
-                            />
+                        />
                 )}
 
 
@@ -90,16 +90,28 @@ class Home extends React.Component {
 
                                         InfContac.Localization.map(
                                             (InfLocalization, Key) =>
-
-                                                <section id="Contact">
-                                                    <Contact
-                                                        Button={Cont.Submit}
-                                                        Title={InfContac.Title}
-                                                        Paragraph={InfContac.Paragraph}
-                                                        NameLabel={InfContac.NameLabel}
-                                                        EmailLabel={InfContac.EmailLabel}
-                                                        PhoneLabel={InfContac.PhoneLabel}
-                                                        MessageLabel={InfContac.MessageLabel}
+                                                <div>
+                                                    <section id="Contact">
+                                                        <Contact
+                                                            Button={Cont.Submit}
+                                                            Title={InfContac.Title}
+                                                            Paragraph={InfContac.Paragraph}
+                                                            NameLabel={InfContac.NameLabel}
+                                                            EmailLabel={InfContac.EmailLabel}
+                                                            PhoneLabel={InfContac.PhoneLabel}
+                                                            MessageLabel={InfContac.MessageLabel}
+                                                            TitleDirection={InfLocalization.TitleDirection}
+                                                            Direction={InfLocalization.Direction}
+                                                            TitleEmail={InfLocalization.TitleEmail}
+                                                            Email={InfLocalization.Email}
+                                                            TitlePhone={InfLocalization.TitlePhone}
+                                                            Phone={InfLocalization.Phone}
+                                                            TitleAtentionHour={InfLocalization.TitleAtentionHour}
+                                                            Day={InfLocalization.Day}
+                                                            Hour={InfLocalization.Hour}
+                                                        />
+                                                    </section>
+                                                    <Copyrigth
                                                         TitleDirection={InfLocalization.TitleDirection}
                                                         Direction={InfLocalization.Direction}
                                                         TitleEmail={InfLocalization.TitleEmail}
@@ -110,12 +122,12 @@ class Home extends React.Component {
                                                         Day={InfLocalization.Day}
                                                         Hour={InfLocalization.Hour}
                                                     />
-                                                </section>
+                                                </div>
                                         )
                                 )
                         )
                 )}
-                <Copyrigth />
+
             </div>
         )
     }

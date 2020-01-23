@@ -67,16 +67,7 @@ class Contact extends React.Component {
             NameLabel,
             EmailLabel,
             PhoneLabel,
-            MessageLabel,
-            TitleDirection, 
-            Direction, 
-            TitleEmail, 
-            Email, 
-            TitlePhone, 
-            Phone, 
-            TitleAtentionHour, 
-            Day, 
-            Hour
+            MessageLabel
         } = this.props;
 
         return (
@@ -118,6 +109,12 @@ class Contact extends React.Component {
                         onChange={this.handleChange}
                         placeholder={MessageLabel}
                     />
+                    <div className="o-TermAndConditions">
+                        <input type="checkbox" required/>
+                        <label>Acepto la </label><a>política de tratamiento de datos</a>
+                    </div>
+
+
                     <BstButton className="o-ButtonSend">{Button}</BstButton>
 
                 </Form>
@@ -138,38 +135,6 @@ class Contact extends React.Component {
                     <h3>Prontamente nos pondremos en contácto contigo.</h3>
 
                 </Rodal>
-
-                <div className="o-Localization">
-                    <div className="o-InfoContact">
-
-                        <div className="o-Group1">
-                            <div className="o-Info">
-                <h3>{TitleDirection}</h3>
-                                <h5>{Direction}</h5>
-                            </div>
-                            <div className="o-Info">
-                <h3>{TitleEmail}</h3>
-                <h5>{Email}</h5>
-                            </div>
-                        </div>
-                        <div className="o-Group1">
-                            <div className="o-Info">
-                <h3>{TitlePhone}</h3>
-                <h5>{Phone}</h5>
-                            </div >
-                            <div className="o-Info">
-                <h3>{TitleAtentionHour}</h3>
-                <h5 id="h5">{Day}</h5>
-                <h5 id="h52">{Hour}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    {/*<div className="o-Map">
-
-                        PARA UTILIZAR EL MAPA HAY QUE UTILIZAR TARJETA DE CREDITO
-
-                </div>*/}
-                </div>
 
             </div>//Final del div global
         )
