@@ -21,10 +21,10 @@ class AllPost extends React.Component {
             <div className="o-AllPost">
 
                 {Posts.map(
-                    (Post, Key) =>
+                    (Post) =>
 
                         <CardPost
-                            Key={Key}
+                        AL={Post.id}
 
                             Author={Post._embedded.author[0].name}
                             FeatImage={Post.featured_media === 0 ? DefaultImage: Post._embedded['wp:featuredmedia']['0'].source_url}

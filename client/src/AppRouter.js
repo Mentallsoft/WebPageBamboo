@@ -103,10 +103,9 @@ class AppRouter extends React.Component {
                 {Images.map(
                     (Imgs, key) =>
                         <button id="LanguageSelector" onClick={this.ChangeLanguage} title={Imgs.Text}>
-                            <img src={Imgs.Language} alt=""/>
-                            </button>
+                            <img src={Imgs.Language} alt="" />
+                        </button>
                 )}
-
                 <Switch>
                     <Route
                         exact path="/"
@@ -128,7 +127,13 @@ class AppRouter extends React.Component {
                             LoadingPost={this.state.LoadingPost}
                             GifUp={Up}
                         />} />
-                    <Route exact path="/Post" component={Post} />
+                    <Route exact path="/Post/:id" render={({ match }) =>
+                        <Post
+                            match={match}
+                            Posts={Posts}
+                            Information={Information}
+                            InfButton={InfButton}
+                        />} />
                     <Route exact component={Page404} />
                 </Switch>
             </App>

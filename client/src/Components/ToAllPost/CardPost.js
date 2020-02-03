@@ -9,27 +9,12 @@ class CardPost extends React.Component {
 
     render() {
 
-        const {FeatImage, Title, Author, Content, Resumen, Category, Date, InfButton, Information, Comments} = this.props;
-
-
+        const {AL, FeatImage, Title, Author, Content, Resumen, Category, Date, InfButton, Information, Comments} = this.props;
         
         return (
             <div className="o-CardPost">
                 <Link style={{textDecoration:"none"}}
-                    to={{
-                        pathname: '/Post',
-                        state: {
-                            FeatImage: FeatImage,
-                            Title: Title,
-                            Author: Author,
-                            Content: Content,
-                            Resumen: Resumen,
-                            Comments: Comments,
-
-                            Information:Information,
-                            InfButton: InfButton
-                        }
-                    }}
+                    to={`/Post/${AL}`}
                 >
                     <div className="o-FullContainerCardPost">
                         
