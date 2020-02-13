@@ -18,7 +18,8 @@
 
 .o-FullContainerContact{
     width: 100vw;
-    min-height: 100vh;
+    min-height: auto;
+    padding: 0rem 0 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;

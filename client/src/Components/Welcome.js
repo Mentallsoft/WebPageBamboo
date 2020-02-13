@@ -5,24 +5,24 @@ import React from "react"
 import "./CSS/Welcome.css"
 
 //Imagenes
-import Fondo from "../Videos/Fondo.mp4"
+import FondoWEBM from "../Videos/Fondo.webm"
 
 class Welcome extends React.Component {
 
     render() {
 
-        const {ClssNm, LogoT1, LogoT2, Bumb, GifUp, Slogan} = this.props;
+        const { ClssNm, LogoT1, LogoT2, Bumb, GifUp, Slogan } = this.props;
 
         return (
             <div className="o-FullContainer" style={{ backgroundImage: "black" }}>
-                <video id="o-VideoBg" autoPlay muted loop>
-                    <source src={Fondo} type="video/mp4" alt="Background Video" />
+                <video id="o-VideoBg"  autoPlay muted loop>   
+                    <source src={FondoWEBM} type="video/webm" alt="Background Video" />
                 </video>
                 <img className={ClssNm} src={LogoT1} alt="" />
                 <img className="o-LogoTipo2" src={LogoT2} alt="" />
                 <img className="o-Bumb" src={Bumb} alt="" />
                 <img className="o-GifUp" src={GifUp} alt="" />
-                <img className="o-Slogan" src={Slogan} alt=""/>             
+                <img className="o-Slogan" src={Slogan} alt="" />
             </div>
         )
     }

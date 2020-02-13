@@ -1,5 +1,6 @@
 //Dependences
 import React from "react"
+import renderHTML from 'react-render-html'
 
 //Style
 import "./CSS/WeAre.css"
@@ -13,7 +14,7 @@ class WeAre extends React.Component {
         return (
             <div className="o-FullContainerWA">
                 <h1>{Title}</h1>
-                <p>{Paragraph}</p>
+                <p>{renderHTML(Paragraph)}</p>
             </div>
         )
     }

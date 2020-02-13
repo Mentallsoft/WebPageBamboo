@@ -19,8 +19,10 @@ class Services extends React.Component {
     constructor() {
         super();
         this.state = {
+            Point: "",
             titulo: "",
             Desc: "",
+            Tec: "",
             Color: "",
             Image: "",
             visible: false
@@ -28,14 +30,18 @@ class Services extends React.Component {
     }
 
     //Metods to Show and Hide pop up!
-    show = (Tl, Dsc, C, I) => e => {
+    show = (Point, Tl, Dsc, Tec, C, I) => e => {
         this.setState({
+            Point: Point,
             titulo: Tl,
             Desc: Dsc,
+            Tec: Tec,
             Color: C,
             Image: I,
             visible: true
         });
+//console.log(Point)
+        
     }
 
     hide() {
@@ -46,7 +52,7 @@ class Services extends React.Component {
     render() {
 
         const { Object } = this.props;
-
+console.log(Object);
         return (
 
             Object.map(
@@ -61,7 +67,7 @@ class Services extends React.Component {
                                 (Info, key) =>
                                     <div
                                         className="o-ContainerCardService"
-                                        onClick={this.show(Info.Title, Info.Paragraph, Info.Color, Info.Image)}
+                                        onClick={this.show(Info.Point, Info.Title, Info.Paragraph, Info.Desc_Tecnic, Info.Color, Info.Image)}
                                     >
                                         <CardService
                                             Service={Info.Title}
@@ -78,8 +84,8 @@ class Services extends React.Component {
                             //Styles PopUp
                             customStyles={{
                                 backgroundColor: "var(--White)",
-                                width: "90vw",
-                                height: "90vh",
+                                width: "97vw",
+                                height: "87vh",
                                 padding: "0",
                                 display: "flex",
                                 aligncontent: "center",
@@ -90,8 +96,10 @@ class Services extends React.Component {
                             <CardServiceExpand
                                 Service={this.state.titulo}
                                 ServiceDesc={this.state.Desc}
+                                ServiceTec={this.state.Tec}
                                 Color={this.state.Color}
                                 Image={this.state.Image}
+                                Point={this.state.Point}
                             />
 
                         </Rodal>

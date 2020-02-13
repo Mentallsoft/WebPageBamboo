@@ -1,19 +1,30 @@
 import React from 'react'
-//import Card from "./CardService"
+import renderHTML from 'react-render-html'
+
 import "./CSS/CardServiceExpand.css"
 
-class CardServiceExpand extends React.Component{
+class CardServiceExpand extends React.Component {
 
-    render(){
-        return(
+    render() {
+
+        const { Image, Service, ServiceTec, Point, Color } = this.props;
+
+        console.log(Point)
+        return (
             <div className="o-ContainerServiceExpand">
-               <div className="o-Presentation">
-                    <img className="o-IconServ" src={this.props.Image} alt=""/>
-                    <h1>{this.props.Service}</h1>
-               </div>
-               <div className="o-Description" style={{backgroundColor: this.props.Color}}>
+                <div className="o-Presentation">
+                    <img className="o-IconServ" src={Image} alt="" />
+                    <h1>{Service}</h1>
+                </div>
+                <div className="o-Description" style={{ backgroundColor: Color }}>
+                    <div className="pruebita">
 
-               </div>
+                        {renderHTML(ServiceTec)}
+
+                    </div>
+
+
+                </div>
             </div>
         )
     }

@@ -1,33 +1,39 @@
 .o-ContainerCardService{
-    width: 21rem;
+    width: 25vw;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;   
 }
 
-.o-ContainerServiceInfo:hover{
-    background-color: var(--GrayClare);
+.o-ContainerCardService:hover{
+    zoom: 1.05;
+    transition: 1s;
 }
 
 .o-ServiceImage{
     width: 7rem;
     height: 7rem;
     position: relative;
-    top: 4vh;
-    background-color: white;
+    top: -1rem;
+    /*background-color: white;*/
     padding: 0 2rem;
 }
 
 .o-ContainerServiceInfo{
-    border: var(--GrayOscure) 0.1rem solid;
-    min-height: 80vh;
+   /* border: var(--GrayOscure) 0.1rem solid;*/
+    min-height: 40vh;
     padding: 2rem;
     text-align: center;
     box-shadow: 10px 10px 9px -6px rgba(0,0,0,0.51);
 }
 
 @media(max-width: 600px){
+
+    .o-ContainerCardService{
+        width: 100vw;   
+    }
+
     .o-ContainerServiceInfo{
         min-height: auto;
     }

@@ -5,6 +5,10 @@
     flex-direction: row;
 }
 
+.o-ContainerServiceExpand p{
+    text-align: justify;
+}
+
 .o-IconServ{
     width: 50%;
     height: 50%;
@@ -23,6 +27,17 @@
 .o-Description{
     width: 60%;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+padding: 0 2rem;
+    text-align: justify;
+}
+
+.pruebita{
+    font-size: 1.5rem;
 }
 
 /*Para pantallas pequeñas*/
@@ -31,11 +46,16 @@
         flex-direction: column;
     }
 
+    .o-ContainerServiceExpand p{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
     .o-Presentation{
         width: 100%;
         height: 40%;
         font-size: 1rem;
-        padding: 2rem 0 0 0;
+        padding: 0.2rem 0 0 0;
     }
 
     .o-Presentation h1{
@@ -45,5 +65,7 @@
     .o-Description{
         width: 100%;
         height: 100%;
+
+        padding: 0 0.2rem;
     }
 }

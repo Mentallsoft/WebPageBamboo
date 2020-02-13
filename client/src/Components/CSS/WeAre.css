@@ -1,7 +1,8 @@
 .o-FullContainerWA{
     background-color: var(--VerdBamboo);
     width: 100vw;
-    min-height: 70vh;
+    min-height: auto;
+    padding: 7rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +11,10 @@
     position: relative;
 }
 
+.o-FullContainerWA strong{
+    color: var(--GrayBambooOscure);
+}
+
 .o-FullContainerWA p{
-    padding: 0 10vw;
+    padding: 0 8vw;
 }

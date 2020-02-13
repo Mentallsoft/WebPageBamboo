@@ -59,8 +59,6 @@ class AppRouter extends React.Component {
 
         axios.get(`${wpURL}/wp-json/wp/v2/posts?_embed`)
             .then(res => {
-                console.warn(res.data);
-                console.log("Funcionó")
                 this.setState({ wpPost: res.data, LoadingPost: "" })
             })
             .catch(error => this.setState({ LoadingPost: "" }))

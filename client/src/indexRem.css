@@ -4,6 +4,7 @@ body{
     margin: 0;
     font-family: 'Archivo Narrow', sans-serif;
     color: var(--White);
+    background-color: black;
     
 }
 

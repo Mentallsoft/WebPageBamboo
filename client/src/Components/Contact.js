@@ -2,6 +2,7 @@
 import React from 'react'
 import { Button as BstButton, Form, Input } from 'reactstrap'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 //Popup
 import Rodal from 'rodal'
@@ -111,7 +112,7 @@ class Contact extends React.Component {
                     />
                     <div className="o-TermAndConditions">
                         <input type="checkbox" required/>
-                        <label>Acepto la </label><a>política de tratamiento de datos</a>
+                        <label>Acepto la </label><Link to={"/"}>política de tratamiento de datos</Link>
                     </div>
 
 
