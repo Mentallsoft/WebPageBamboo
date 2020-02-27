@@ -9,7 +9,7 @@ class CardPost extends React.Component {
 
     render() {
 
-        const {AL, FeatImage, Title, Author, Content, Resumen, Category, Date, InfButton, Information, Comments} = this.props;
+        const {AL, FeatImage, Title, Resumen, Category, Date} = this.props;
         
         return (
             <div className="o-CardPost">

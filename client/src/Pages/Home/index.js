@@ -28,7 +28,7 @@ class Home extends React.Component {
     render() {
 
         //Content of page
-        const { InfButton, Information, Images, GifUp } = this.props;
+        const { InfButton, Information, Images, GifUp, PDFPolitycs} = this.props;
 
         return (
             <div className="o-indexHome">
@@ -109,6 +109,11 @@ class Home extends React.Component {
                                                             TitleAtentionHour={InfLocalization.TitleAtentionHour}
                                                             Day={InfLocalization.Day}
                                                             Hour={InfLocalization.Hour}
+                                                            DataPolitic1={InfContac.DataPolitic1}
+                                                            DataPolitic2={InfContac.DataPolitic2}
+                                                            SendSuccess={InfContac.SendSuccess}
+                                                            MessageSuccess={InfContac.MessageSuccess}
+                                                            PDFPolitycs={PDFPolitycs}
                                                         />
                                                     </section>
                                                     <Copyrigth

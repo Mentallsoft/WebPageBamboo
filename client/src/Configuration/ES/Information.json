@@ -145,6 +145,10 @@
                 "EmailLabel": "Tu correo aquí",
                 "PhoneLabel": "Tu teléfono aquí",
                 "MessageLabel": "Tu mensaje aquí",
+                "DataPolitic1" : "Acepto la ",
+                "DataPolitic2" : "Política de tratamiento de datos",
+                "SendSuccess" : "¡Tu mensaje ha sido enviado con éxito!",
+                "MessageSuccess" : "Pronto nos pondremos en contácto contigo",
                 "Localization": [
                     {
                         "TitleDirection": "Dirección",

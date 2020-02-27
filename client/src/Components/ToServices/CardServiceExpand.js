@@ -11,16 +11,14 @@ class CardServiceExpand extends React.Component {
 
         console.log(Point)
         return (
-            <div className="o-ContainerServiceExpand">
-                <div className="o-Presentation">
+            <div className="o-ContainerServiceExpand" >
+                <div className="o-Presentation" style={{ backgroundColor: Color }}>
                     <img className="o-IconServ" src={Image} alt="" />
-                    <h1>{Service}</h1>
                 </div>
                 <div className="o-Description" style={{ backgroundColor: Color }}>
-                    <div className="pruebita">
+                    <div className="Paragraph">
 
                         {renderHTML(ServiceTec)}
-
                     </div>
 
 

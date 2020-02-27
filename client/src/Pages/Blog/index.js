@@ -19,7 +19,7 @@ class Blog extends React.Component {
 
     render() {
 
-        const { InfButton, Information, Images, Posts, LoadingPost, GifUp } = this.props;
+        const { InfButton, Information, Images, Posts, LoadingPost, GifUp, PDFPolitycs } = this.props;
 
 
         return (
@@ -74,6 +74,11 @@ class Blog extends React.Component {
                                                                 EmailLabel={InfContac.EmailLabel}
                                                                 PhoneLabel={InfContac.PhoneLabel}
                                                                 MessageLabel={InfContac.MessageLabel}
+                                                                DataPolitic1={InfContac.DataPolitic1}
+                                                                DataPolitic2={InfContac.DataPolitic2}
+                                                                SendSuccess={InfContac.SendSuccess}
+                                                                MessageSuccess={InfContac.MessageSuccess}
+                                                                PDFPolitycs={PDFPolitycs}
                                                             />
                                                             <Copyrigth
                                                                 TitleDirection={InfLocalization.TitleDirection}

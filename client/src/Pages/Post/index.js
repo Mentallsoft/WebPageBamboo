@@ -28,7 +28,7 @@ class Post extends React.Component {
         window.scrollTo(0, 0);
     }
 
-    ExisteBlog = (Po, InfButton, Information) =>{
+    ExisteBlog = (Po, InfButton, Information, PDFPolitycs) =>{
         return(
             Po.map(
                 (Posts) =>
@@ -77,6 +77,12 @@ class Post extends React.Component {
                                                             EmailLabel={InfContac.EmailLabel}
                                                             PhoneLabel={InfContac.PhoneLabel}
                                                             MessageLabel={InfContac.MessageLabel}
+                                                            DataPolitic1={InfContac.DataPolitic1}
+                                                            DataPolitic2={InfContac.DataPolitic2}
+                                                            SendSuccess={InfContac.SendSuccess}
+                                                            MessageSuccess={InfContac.MessageSuccess}
+                                                            PDFPolitycs={PDFPolitycs}
+
                                                         />
                                                         <Copyrigth
                                                             TitleDirection={InfLocalization.TitleDirection}
@@ -103,11 +109,11 @@ class Post extends React.Component {
 
     render() {
 
-        const { Posts, InfButton, Information } = this.props;
+        const { Posts, InfButton, Information, PDFPolitycs} = this.props;
         const Po = Posts.filter(user => user.id == this.props.match.params.id);
 
             return (
-                this.ExisteBlog(Po, InfButton, Information)
+                this.ExisteBlog(Po, InfButton, Information, PDFPolitycs)
             )  
     }
 }

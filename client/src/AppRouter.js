@@ -9,24 +9,33 @@ import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
 import Page404 from "./Pages/Page404"
 import Post from "./Pages/Post"
+import Patio_de_pruebas from "./Pages/Patio_de_pruebas"
 
 //Styles
 import 'react-flags-select/css/react-flags-select.css';
 import "./AppRouter.css"
 
 //Content
-//ES
-import ButtonsES from "./Configuration/ES/Buttons.json"
-import InformationES from "./Configuration/ES/Information.json"
-import ImageES from "./Configuration/ES/Images.json"
+    //ES
+    import ButtonsES from "./Configuration/ES/Buttons.json"
+    import InformationES from "./Configuration/ES/Information.json"
+    import ImageES from "./Configuration/ES/Images.json"
 
-//EN
-import ButtonsEN from "./Configuration/EN/Buttons.json"
-import InformationEN from "./Configuration/EN/Information.json"
-import ImageEN from "./Configuration/EN/Images.json"
+    //EN
+    import ButtonsEN from "./Configuration/EN/Buttons.json"
+    import InformationEN from "./Configuration/EN/Information.json"
+    import ImageEN from "./Configuration/EN/Images.json"
 
+//GIF
 import Loading from "../src/Images/GIF/Loading.gif"
 import Up from "../src/Images/GIF/UP.gif"
+
+//FILES
+//ES
+import PDFPolitycsES from "./Files/ES/PDF/POLITICA_DATOS.pdf"
+
+//EN
+import PDFPolitycsEN from "./Files/EN/PDF/POLITICA_DATOS.pdf"
 
 class AppRouter extends React.Component {
 
@@ -82,18 +91,21 @@ class AppRouter extends React.Component {
         var Information = "";
         var Images = "";
         var Posts = "";
+        var PDFPolitycs = "";
 
         if (this.state.Language === "ES") {
             InfButton = ButtonsES
             Information = InformationES
             Images = ImageES
             Posts = this.state.wpPost
+            PDFPolitycs = PDFPolitycsES
         }
         else {
             InfButton = ButtonsEN;
             Information = InformationEN
             Images = ImageEN
             Posts = this.state.wpPost
+            PDFPolitycs = PDFPolitycsEN
         }
 
         return (
@@ -113,6 +125,7 @@ class AppRouter extends React.Component {
                                 Information={Information}
                                 Images={Images}
                                 GifUp={Up}
+                                PDFPolitycs = {PDFPolitycs}
                             />} />
                     <Route exact path="/Blog" render={() =>
                         <Blog
@@ -124,6 +137,7 @@ class AppRouter extends React.Component {
                             Alert={this.state.Alert}
                             LoadingPost={this.state.LoadingPost}
                             GifUp={Up}
+                            PDFPolitycs = {PDFPolitycs}
                         />} />
                     <Route exact path="/Post/:id" render={({ match }) =>
                         <Post
@@ -131,7 +145,12 @@ class AppRouter extends React.Component {
                             Posts={Posts}
                             Information={Information}
                             InfButton={InfButton}
+                            PDFPolitycs = {PDFPolitycs}
                         />} />
+                    <Route
+                        exact path="/Patio_de_pruebas"
+                        render={() =>
+                            <Patio_de_pruebas />} />
                     <Route exact component={Page404} />
                 </Switch>
             </App>

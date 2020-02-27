@@ -23,6 +23,7 @@ app.post('/Api/Contact', (req, res) => {
         <li>Nombre: ${req.body.Name}</li>
         <li>Correo: ${req.body.Email}</li>
         <li>Teléfono: ${req.body.Phone}</li>
+        <li style="color: green">Política de datos aceptada el: ${Date(Date.now())}
     </ul>  
     <h3>Mensaje:</h3>
     <p>${req.body.Message}</p>`

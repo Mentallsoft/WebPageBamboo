@@ -2,7 +2,6 @@
 import React from 'react'
 import { Button as BstButton, Form, Input } from 'reactstrap'
 import axios from 'axios'
-import { Link } from 'react-router-dom';
 
 //Popup
 import Rodal from 'rodal'
@@ -47,9 +46,9 @@ class Contact extends React.Component {
             visible: true
         })
 
-        await axios.post('/Api/Contact', {
+       /* await axios.post('/Api/Contact', {
             Name, Email, Phone, Message, Subject
-        })
+        })*/
 
     }
 
@@ -68,7 +67,12 @@ class Contact extends React.Component {
             NameLabel,
             EmailLabel,
             PhoneLabel,
-            MessageLabel
+            MessageLabel,
+            DataPolitic1,
+            DataPolitic2,
+            SendSuccess,
+            MessageSuccess,
+            PDFPolitycs
         } = this.props;
 
         return (
@@ -112,7 +116,7 @@ class Contact extends React.Component {
                     />
                     <div className="o-TermAndConditions">
                         <input type="checkbox" required/>
-                        <label>Acepto la </label><Link to={"/"}>política de tratamiento de datos</Link>
+                        <label>{DataPolitic1}</label><a href = {PDFPolitycs} target="_blank">{DataPolitic2}</a>
                     </div>
 
 
@@ -124,16 +128,16 @@ class Contact extends React.Component {
 
                 <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
                     customStyles={{
-                        width: "75vw",
-                        height: "50vh",
-                        backgroundColor: "white",
-                        color: "green",
+                        width: "50%",
+                        height: "40%",
+                        backgroundColor: "green",
+                        color: "white",
                         textalign: "center",
                         textAlign: "center", textJustify: "center"
                     }}
                 >
-                    <h1>¡Tu mensaje ha sido enviado con éxito!</h1>
-                    <h3>Prontamente nos pondremos en contácto contigo.</h3>
+                    <h1>{SendSuccess}</h1>
+                    <h3>{MessageSuccess}</h3>
 
                 </Rodal>
 
