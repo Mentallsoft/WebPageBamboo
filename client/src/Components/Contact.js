@@ -46,9 +46,9 @@ class Contact extends React.Component {
             visible: true
         })
 
-       /* await axios.post('/Api/Contact', {
+        await axios.post('/Api/Contact', {
             Name, Email, Phone, Message, Subject
-        })*/
+        })
 
     }
 
@@ -115,8 +115,8 @@ class Contact extends React.Component {
                         placeholder={MessageLabel}
                     />
                     <div className="o-TermAndConditions">
-                        <input type="checkbox" required/>
-                        <label>{DataPolitic1}</label><a href = {PDFPolitycs} target="_blank">{DataPolitic2}</a>
+                        <input type="checkbox" required />
+                        <label>{DataPolitic1}</label><a href={PDFPolitycs} target="_blank">{DataPolitic2}</a>
                     </div>
 
 
@@ -128,7 +128,7 @@ class Contact extends React.Component {
 
                 <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}
                     customStyles={{
-                        width: "50%",
+                        width: "60%",
                         height: "40%",
                         backgroundColor: "green",
                         color: "white",

@@ -7,9 +7,8 @@ class CardServiceExpand extends React.Component {
 
     render() {
 
-        const { Image, Service, ServiceTec, Point, Color } = this.props;
+        const { Image, ServiceTec, Color } = this.props;
 
-        console.log(Point)
         return (
             <div className="o-ContainerServiceExpand" >
                 <div className="o-Presentation" style={{ backgroundColor: Color }}>
