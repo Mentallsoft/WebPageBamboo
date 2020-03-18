@@ -15,7 +15,7 @@ app.post('/Api/Contact', (req, res) => {
 
     const Sender = "bambooanalyticssas@gmail.com";
     const PwdSender = "Bamboo2020*";
-    const receiver = "efrain.pizarro@bambooanalytics.com.co"
+    const receiver = "info@bambooanalytics.com.co"
 
     const htmlEmail = 
     `<h3>Información de contacto</h3>
