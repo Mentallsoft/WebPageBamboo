@@ -1,9 +1,11 @@
 .o-FullFrame{
     position: fixed;
+    display: flex;
     width: 100vw;
     margin: 0;
     padding: 0;
     z-index: 999;
+    flex-direction: column;
 }
 
 .o-Menu{
@@ -42,10 +44,50 @@
     background-color: var(--VerdBamboo);
 }
 
+.o-Social_Network{
+    display: flex;
+    width: 20vw;
+    position: relative;
+    top: 90vh;
+    transition: 0.2s;
+    height: 6rem;
+}
+
+.o-Social_Network:hover{
+    top: 87vh;
+    transition: 0.2s;
+}
+
+#o-Icon{
+    width: 3rem;
+    margin: 0 0.5rem;
+    background-color: white;
+    border-radius: 15px;
+}
+
 @media(max-width: 600px){
     .o-Menu{
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .o-Social_Network{
+        position: relative;
+        width: 10vw;
+        
+        flex-direction: column;
+        top: 70vh;
+    }
+
+    .o-Social_Network:hover{
+        top: 70vh;
+    }
+
+    #o-Icon{
+        width: 2rem;
+        margin: 0 0.5rem;
+        background-color: white;
+        border-radius: 10px;
     }
 }

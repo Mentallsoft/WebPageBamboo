@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef30679cfeb0ce7d232060b96f9a0905",
+    "revision": "e035d423ac7f912c90c308a0504475a8",
     "url": "/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.fcb01a27.chunk.css"
   },
   {
-    "revision": "dbe397b653805192d903",
-    "url": "/static/css/main.c3041080.chunk.css"
+    "revision": "80c05a06f82f2319eeef",
+    "url": "/static/css/main.00ce7e31.chunk.css"
   },
   {
     "revision": "ed6e9d74d05283db3e0b",
     "url": "/static/js/2.bb710713.chunk.js"
   },
   {
-    "revision": "dbe397b653805192d903",
-    "url": "/static/js/main.bf410395.chunk.js"
+    "revision": "80c05a06f82f2319eeef",
+    "url": "/static/js/main.8496ba20.chunk.js"
   },
   {
     "revision": "d44752e855fd8dd013af",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "19cc777afcca19dda6f4a13ea889d6b6",
     "url": "/static/media/Loading.19cc777a.gif"
-  },
-  {
-    "revision": "a2219a5b09278c8cea56951037fc29ef",
-    "url": "/static/media/POLITICA_DATOS.a2219a5b.pdf"
   },
   {
     "revision": "a2ee338f729024326cdf0599badd0fe4",
