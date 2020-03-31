@@ -1,0 +1,35 @@
+.o-FullContainerWA{
+    background-color: white;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-FullContainerWA strong{
+    color: var(--VerdBambooOscure);
+}
+
+.o-FullContainerWA h1{
+    color: grey;
+}
+
+.o-FullContainerWA p{
+    padding: 0 8vw;
+    color: grey;
+}
+
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px){
+    .o-FullContainerWA{
+        min-height: auto;
+        padding: 3rem 0;
+    }
+
+    .o-FullContainerWA p{
+        text-align: justify;
+    }
+}

@@ -1,0 +1,129 @@
+.o-PostIndex{
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.o-PostIndex p{
+    color: var(--Black);
+    
+    text-align: justify;
+    padding: 0 10vw;
+}
+
+.o-PostContainerImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+.o-ImagePost{
+    position: absolute;
+    z-index: 0;
+    top: 0vh;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.2);
+    
+}
+
+#Titulo{
+    text-align: left;
+    font-size: 4rem;
+    color: var(--White);
+    margin: 0;
+}
+
+#Autor{
+    text-align: left;
+    margin: 0;
+    color: var(--VerdBamboo);
+}
+
+#TitleContent{
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+    padding: 2rem 10vw;
+    z-index: 3;
+}
+
+#BodyPost h1{
+    color: var(--Black);
+}
+
+#BodyPost h2{
+    color: var(--Black);
+}
+
+#BodyPost h3{
+    color: var(--Black);
+}
+
+#BodyPost h4{
+    color: var(--Black);
+}
+
+#BodyPost h5{
+    color: var(--Black);
+}
+
+#BodyPost h6{
+    color: var(--Black);
+}
+
+iframe{
+    width: 100%;
+    height: 90vh;
+}
+
+@media(max-aspect-ratio: 1/1){
+ 
+    .o-PostIndex p{
+        padding: 0 1rem;
+    }
+
+    .o-PostContainerImage{
+        height: 30vh;    
+    }
+
+    .o-ImagePost{ 
+        height: 100%;       
+    }
+
+    #Titulo{
+        text-align: left;
+        font-size: 1.5rem;
+        color: var(--White);
+        margin: 0;
+    }
+
+    #TitleContent{  
+        padding: 2rem 1rem;        
+    }
+
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+  
+}
+
+@media(min-width: 601px) and (max-width: 1000px){
+
+    #Titulo{
+        font-size: 2rem;
+        
+    }
+}

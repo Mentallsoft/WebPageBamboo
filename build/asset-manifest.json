@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c6c9e258.chunk.css",
+    "main.js": "/static/js/main.f0718307.chunk.js",
+    "main.js.map": "/static/js/main.f0718307.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0bfa1805.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0bfa1805.js.map",
+    "static/css/2.fcb01a27.chunk.css": "/static/css/2.fcb01a27.chunk.css",
+    "static/js/2.570c2a83.chunk.js": "/static/js/2.570c2a83.chunk.js",
+    "static/js/2.570c2a83.chunk.js.map": "/static/js/2.570c2a83.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b4086eb687f02def8c1c6cbb10d76e54.js": "/precache-manifest.b4086eb687f02def8c1c6cbb10d76e54.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.fcb01a27.chunk.css.map": "/static/css/2.fcb01a27.chunk.css.map",
+    "static/css/main.c6c9e258.chunk.css.map": "/static/css/main.c6c9e258.chunk.css.map",
+    "static/media/Bamboo Blanco.ico": "/static/media/Bamboo Blanco.10079d22.ico",
+    "static/media/FondoHoja.jpeg": "/static/media/FondoHoja.681ca4e2.jpeg",
+    "static/media/FondoNetwrok.jpg": "/static/media/FondoNetwrok.ed8c8375.jpg",
+    "static/media/Loading.gif": "/static/media/Loading.19cc777a.gif",
+    "static/media/LogoBamboo.png": "/static/media/LogoBamboo.be456555.png",
+    "static/media/POLITICA_DATOS.pdf": "/static/media/POLITICA_DATOS.a2ee338f.pdf",
+    "static/media/indexRem.css": "/static/media/Roboto-ThinItalic.460b4830.ttf",
+    "static/media/UP.gif": "/static/media/UP.bae42f5d.gif",
+    "static/media/paper-plane.svg": "/static/media/paper-plane.f01a9234.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bfa1805.js",
+    "static/css/2.fcb01a27.chunk.css",
+    "static/js/2.570c2a83.chunk.js",
+    "static/css/main.c6c9e258.chunk.css",
+    "static/js/main.f0718307.chunk.js"
+  ]
+}
