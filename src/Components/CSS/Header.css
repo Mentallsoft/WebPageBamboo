@@ -85,6 +85,7 @@
     }
 
 @media(max-width: 800px){
+    
     .LargeDeviceView{
         display: none;
     }
@@ -107,4 +108,12 @@
     width: 10vw;
     transition: 0.1s;
     }
+}
+
+@media(max-height: 550px){
+
+    .o-FullFrame{
+        height: 60PX;
+    }
+
 }

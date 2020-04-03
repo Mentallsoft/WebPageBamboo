@@ -11,6 +11,14 @@
 
 #o-Lines{
     width: 1.6rem;
-    height: 0.2rem;
+    height: 15%;
     background: white;
+}
+
+@media(max-height: 550px){
+
+    .o-MenuBotton{
+        height: 60PX;
+    }
+
 }

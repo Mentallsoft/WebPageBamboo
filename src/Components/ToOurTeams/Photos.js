@@ -13,7 +13,6 @@ class Photos extends React.Component {
                     <img src={this.props.Photo} alt="" />
                 </div>
 
-                <div className="o-ToAnimation">
                     <div className="o-TeamInformation">
                         <h5>
                             {this.props.Member}
@@ -21,11 +20,10 @@ class Photos extends React.Component {
                             <br />
                             {this.props.Role}
                             <br />
-                            <br />
-                            Ext. {this.props.Extension}
+                         {/**   <br />
+                            Ext. {this.props.Extension} */}
                         </h5>
                     </div>
-                </div>
             </div>
         )
     }

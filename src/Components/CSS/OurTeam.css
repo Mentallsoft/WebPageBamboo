@@ -19,6 +19,6 @@
 /*Para pantallas pequeñas*/
 @media (max-aspect-ratio: 1/1) {
     .o-ContainerPhotoTeam{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
